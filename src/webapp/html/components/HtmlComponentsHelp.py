@@ -52,7 +52,7 @@ class HtmlComponentsHelp(object):
                         
                         <li><a href="#barleymap_output">
                         
-                            Barleymap output
+                            Prunusmap output
                             
                         </a></li>
                             
@@ -124,7 +124,7 @@ class HtmlComponentsHelp(object):
                         
                         <br/>
                         
-                        The "Find markers" tool allows searching for loci which are commonly used by the barley community.
+                        The "Find markers" tool allows searching for loci which are commonly used by the Prunus community.
                         These loci include genetic markers, genes, BAC contigs, WGS contigs, etc. from different <strong>datasets</strong>.
                         Their map positions have been previously computed and stored, so that the users can retrieve
                         them by providing the identifier of the locus.
