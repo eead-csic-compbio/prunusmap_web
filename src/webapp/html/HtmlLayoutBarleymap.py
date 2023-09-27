@@ -84,7 +84,7 @@ class HtmlLayoutBarleymap(object):
         <head>
             <meta charset="utf-8" />
             <title>PrunusMap</title>
-            <meta content="Najla Ksouri, Bruno Contreras Moreira" name="Najla Ksouri, Bruno Contreras Moreira" />
+            <meta content="Najla Ksouri, Yolanda Gogorcena, Bruno Contreras Moreira" name="Najla Ksouri, Yolanda Gogorcena, Bruno Contreras Moreira" />
             <meta content="Map markers to Prunus genomes" name="Map markers to Prunus genomes" />
             <meta content="peach, almond, prunusmap, physical map, genetic map, markers, mapping, bioinformatics, blast, gmap, genome, genomics" name="keywords" />
             <link rel="stylesheet" href="{0}" type="text/css" media="screen"/>
@@ -154,11 +154,11 @@ class HtmlLayoutBarleymap(object):
     def footer():
         return """
         <footer class="infobar">
-            <a href="http://www.eead.csic.es/compbio/" target="_blank">Computational and structural biology group</a>
+            <a href="https://www.eead.csic.es/compbio" target="_blank">Computational and structural biology group</a>
             ::
-            <a href="http://eead.csic.es/" target="_blank">Estaci&oacute;n Experimental de Aula Dei</a>
+            <a href="https://www.eead.csic.es/" target="_blank">Estaci&oacute;n Experimental de Aula Dei</a>
             ::
-            <a href="http://www.csic.es/" target="_blank">Consejo Superior de Investigaciones Cient&iacute;ficas</a>
+            <a href="https://www.csic.es/" target="_blank">Consejo Superior de Investigaciones Cient&iacute;ficas</a>
         </footer>
         """
     
@@ -169,8 +169,8 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
-            <br/>25-08-2023:<br/>
-            . Start editing the fork.
+            <br/>27-09-2023:<br/>
+            . Added SNP markers from the peach 9k array.
             <br/>
         """.format(base_url))
             
@@ -219,24 +219,22 @@ class HtmlLayoutBarleymap(object):
             <strong>Further information</strong> about how this tool works and help on using it can be found
             <strong><a href="{0}">here</a></strong>.
             <br/>
-            Or you may wish to <strong>contact</strong> the <a href="http://www.eead.csic.es/compbio/" target="_blank">Computational and structural biology group</a>
-            (<a href="http://www.eead.csic.es">EEAD</a> - <a href="http://www.csic.es">CSIC</a>):<br/>
-            <a href="mailto:cpcantalapiedra@gmail.com">Carlos P Cantalapiedra</a>
-            <br/>
+            Or you may wish to <strong>contact</strong> the <a href="https://www.eead.csic.es/compbio/" target="_blank">Computational and structural biology group</a>
+            (<a href="https://www.eead.csic.es">EEAD</a> - <a href="https://www.csic.es">CSIC</a>):<br/>
             <a href="mailto:bcontreras@eead.csic.es">Bruno Contreras-Moreira</a>
             <br/><br/>
             
-            <strong>Citation:</strong>
+            <strong>Citations:</strong>
             <a href="http://link.springer.com/article/10.1007%2Fs11032-015-0253-1">{1}</a>
             <br/><br/>
             <hr/>
             <br/>
             
-            <cite><sup>[1]</sup>IBSC. 2012.
-            <a href="http://dx.doi.org/10.1038/nature11543" target="_blank">
-            A physical, genetic and functional sequence assembly of the barley genome.
+            <cite><sup>[1]</sup>International Peach Genome Initiative. 2013.
+            <a href="https://doi.org/10.1038/ng.2586" target="_blank">
+            The high-quality draft genome of peach (Prunus persica) identifies unique patterns of genetic diversity, domestication and genome evolution.
             </a>
-            Nature. 491:711-16. doi:10.1038/nature11543
+            Nature Genetics. 2013 May;45(5):487-94. doi: 10.1038/ng.2586
             </cite>
             <br/>
             
