@@ -178,8 +178,7 @@ class HtmlLayoutBarleymap(object):
             <br/><br/>
             <hr/>
             <b><a href="{2}">PrunusMap</a></b> was designed to search the position of <em>Prunus</em> genetic markers
-            on the Prunus persica cv. Lovell <strong>Physical Maps</strong> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) 
-            and the Prunus dulcis cv. Texas <strong>Physical Map</strong> (NCBI <sup>[3]</sup>).
+            on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> <sup>[3]</sup>).
             <br/><br/>
             
             The <strong><i><a href="{2}/find/">Find markers</a></i></strong> option allows to find the position of markers by using their identifiers as input.
