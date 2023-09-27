@@ -172,7 +172,7 @@ class HtmlLayoutBarleymap(object):
             <br/>27-09-2023:<br/>
             . Added SNP markers from the peach 9k array.
             <br/> 
-            <br/>278-07-2023:<br/>
+            <br/>27-07-2023:<br/>
             . Web server and and running.
             <br/>
 
