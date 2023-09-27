@@ -277,7 +277,7 @@ class HtmlLayoutBarleymap(object):
 
             <cite><sup>[7]</sup>Duval et al. 2023
             <a href="https://doi.org/10.3390/plants12020242" target="_blank">
-            Development and Evaluation of an Ax iomTM 60K SNP Array for Almond (Prunus dulcis).
+            Development and Evaluation of an Axiom 60K SNP Array for Almond (Prunus dulcis).
             </a>
             Plants 12(2): 242. doi: 10.3390/plants12020242
             </cite>
