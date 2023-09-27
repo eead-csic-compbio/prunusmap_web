@@ -100,12 +100,12 @@ class HtmlComponentsHelp(object):
                     <h2 id="overview">Overview</h2>
                     
                         <br/>
-                        Prunusmap was designed to search the genetic and physical positions of barley markers on
-                        the <strong>Barley Physical Map</strong> (IBSC<sup>[1]</sup>) and
-                        the <strong>POPSEQ</strong> map<sup>[2]</sup>. The strong>Morex Genome</strong><sup>[3]</sup> map
-                        was subsequently added in 2017. The current version uses the <strong>MorexV3</strong> genome<sup>[5]</sup> by default.
+
+                        Prunusmap was designed to search the genetic and physical positions of <em>Prunus</em> genetic markers
+                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> <sup>[3]</sup>).
+                        The current version uses the <strong>Pp_NCBI_V2</strong> map<sup>[5]</sup> by default.
                         <br/><br/>
-                        Barleymap provides <strong>three tools</strong> to retrieve data from the maps:
+                        Prunusmap provides <strong>three tools</strong> to retrieve data from the maps:
                         <ul class="help_list">
                             <li>"Find markers": to retrieve the position of markers providing their identifiers.</li>
                             <li>"Align sequences": to obtain the position of FASTA sequences by pairwise alignment.</li>
@@ -149,7 +149,7 @@ class HtmlComponentsHelp(object):
                         The last usually refers to WGS contigs, BAC contigs, or other elements associated to map positions (anchored), 
                         but which lack a biological meaning per se.
                         Besides that, the user can also choose whether to "show only main features" for each map.
-                        For example, for Morex Genome, "HORVU" genes are configured as "main" whereas "MLOCs" are not.
+                        <!--For example, for Morex Genome, "HORVU" genes are configured as "main" whereas "MLOCs" are not.-->
                         The "Add features" option involves 2 ways to add additional data to the results:
                         
                         <ul class="help_list">
@@ -174,76 +174,51 @@ class HtmlComponentsHelp(object):
                         
                         <strong>Other parameters</strong> include whether to show or not markers with multiple mappings,
                         whether to sort the output by centimorgans (cM) or basepairs (bp), and an option to send the results to an email address provided by the user.
-                        Note that the option "Sort by" will be applied only for IBSC2012, which has both cM and bp positions available.
-                        POPSEQ data will be always sorted by cM, and Morex Genome data by bp.
+                        <!--Note that the option "Sort by" will be applied only for maps with both cM and bp positions available.-->
                         
                         <br/><br/>
                         
-                        <h3 id="datasets_included">Datasets included in Barleymap web</h3>
+                        <h3 id="datasets_included">Datasets included in Prunusmap web</h3>
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                         <br/>
                         
                         The next is a list of datasets whose map positions have been pre-computed and stored in this instance of the Barleymap web application.
                         Note that the
                         <a href="https://github.com/Cantalapiedra/barleymap">standalone version</a> or a custom
-                        <a href="https://github.com/Cantalapiedra/barleymap_web">web version</a> of barleymap could be used to create other datasets.
+                        <a href="https://github.com/eead-csic-compbio/prunusmap_web">web version</a> of Prunusmap could be used to create other datasets.
                         
                         <ul class="help_list">
                         
+                    <cite><sup>[7]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
+                    </cite><br>
+
+
+
                             <li>
-                                <b>BOPA1</b> dataset<sup>[4][11]</sup>: bears 1,536 sequences.
-                                "BOPA consensus" (e.g.: 11_20003) or
-                                "POPA12" identifiers must be provided (e.g.: ABC09016-2-2-348, 7174-365, BOPA1_7174-365, ...).
+                                <b> IRSC 9K markers</b> <i>Prunus persica</i> dataset<sup>[4,8]</sup>: identifiers look like SNP_IGA_134631, snp_scaffold_1_46157131, snp_1_46757382, Pp8Cl or RosCOS1338-411. 
                                 <br/>
-                                A full list of markers, different identifiers and their sequences can be found at [4][11] (supplementary Table S9).
+                                A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
                             </li>
-                            
+                           
                             <li>
-                                <b>BOPA2</b> dataset<sup>[4][11]</sup>: bears 1,536 sequences.
-                                "BOPA consensus" identifiers must be provided (e.g.: 12_31342, i_12_31342, BOPA2_12_31342).
+                                <b>IRSC 16K markers</b> <i>Prunus persica</i> dataset<sup>[5,8]</sup>: identifiers look like SNP_IGA_679 or Peach_AO_0000136. 
                                 <br/>
-                                A full list of markers, different identifiers and their sequences can be found at [4][11] (supplementary Table S10).
+                                A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
                             </li>
-                            
+
                             <li>
-                                <b>Illumina iSelect Infinium</b><sup>[5]</sup>: 7,864 sequences.
-                                Identifiers can be provided in different formats (e.g.: i_11_10882, 11_10882, 6964-414, BOPA1_6964-414, ...).
-                                <br/>
-                                A full list of markers, different identifiers and their sequences can be found at [5] (supplementary Table 6).
-                                <br/>
-                                (Illumina Infinium iSelect technology belongs to Illumina®)
+                                <b>AdafuelxFlordaguard</b> peach rootstock markers<sup>[6]</sup> with physical and genetic positions: identifiers look like Pp01_60632_SC_0.
                             </li>
                             
                             <li>
-                                <b>Illumina 50K</b><sup>[6][*]</sup>: 43,078 sequences with positions provided by JHI. Morex Genome and MorexV3 only.
-                                "Illumina 50K" identifiers must be provided (e.g.: JHI-Hv50k-2016-7), but it accepts previous identifiers for
-                                markers from previous datasets (e.g. SCRI_RS_10006).
-                                <br/>
-                                A full list of markers, different identifiers and their sequences can be found at [6][*'] (supplementary Table XX).
-                                <br/>
-                                (Illumina Infinium technology belongs to Illumina®)
+                                <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
-                            <li><b>DArTs</b><sup>[7][6]</sup>: 2,000 sequences (e.g.: bPb-3150 or bPb-3150_PUR_f+r, bPb-2614 or bPb-2614_WSU_r).
-                                <br/>Sequences for DArTs can be found at [7][6'].
-                            </li>
-                            
-                            <li><b>DArTseq SNPs</b><sup>[8][7]</sup>: 8,535 sequences (e.g.: 3254894|F|0 or 3254894).</li>
-                            
-                            <li><b>DArTseq PAVs (SilicoDArTs)</b><sup>[8][7]</sup>: 15,526 sequences (e.g.: 3271396|F|0 or 3271396).
-                                <br/>
-                                NOTE that 1,761 sequences from DArTseq are PAVs and contain SNPs, so that the identifier is the same for both markers.
-                                <br/>
-                                (DArTs<sup>TM</sup> and DArTseq<sup>TM</sup> technologies belong to Diversity Arrays Technology®)
-                            </li>
-                            
-                            <li><b>Oregon Wolfe Barley GBS SNPs</b><sup>[9][8]</sup>: 34,396 sequences (e.g.: owbGBS1162 or owbGBS34926).
-                                <br/>
-                                A full list of markers their sequences can be found at [9][8] (supplementary Dataset S1).
-                            </li>
-                            
-                            <li><b>Haruna nijo cultivar flcDNAs</b><sup>[10][9]</sup>: 28620 sequences (e.g.: AK358336 or AK358336.1).</li>
-                            
+                           ....
+
+
+
+
                             <li><b>HarvEST Unigenes (assembly #36)</b><sup>[11][10]</sup>: 70148 sequences (e.g.: U36_70143 or U36_998).</li>
                             
                             <li><b>IBSC2012 genes</b><sup>[2][*]</sup>: 14,923 HC and 19,415 LC genes (e.g.: MLOC_67805).</li>
@@ -364,7 +339,9 @@ class HtmlComponentsHelp(object):
                         
                         <h3 id="references_included">References included in Barleymap web</h3>
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
-                        
+                       
+PrunusMap was designed to search the position of Prunus genetic markers on the Prunus persica cv. Lovell Physical Maps (NCBI and Phytozome [1,2]) and the Prunus dulcis cv. Texas Physical Map (NCBI [3]).
+
                         <ul class="help_list">
                             <li><strong>Morex Genome</strong><sup>[3]</sup></li>
                                 <br/>
@@ -637,10 +614,13 @@ class HtmlComponentsHelp(object):
                     <cite><sup>[7]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
                     </cite><br>
 
-                    <cite><sup>[8]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
+                    <cite><sup>[8]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgky1000" target="_blank">Jung et al. 2019</a>
+                    </cite><br>
+
+                    <cite><sup>[9]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
                                             target="_blank">Wu and Watanabe 2005</a></cite>
                     <br/>
-                    <cite><sup>[9]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
+                    <cite><sup>[10]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
                                             target="_blank">Altschul et al. 1990</a></cite>
                     <br/>
                 </section>
