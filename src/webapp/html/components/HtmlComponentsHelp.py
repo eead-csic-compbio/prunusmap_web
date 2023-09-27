@@ -27,7 +27,7 @@ class HtmlComponentsHelp(object):
                             <ul>
                                 <li><a href="#datasets_included">
                                 
-                                    Datasets included in Barleymap web
+                                    Datasets included in Prunusmap web
                                     
                                 </a></li>
                             </ul>
@@ -40,7 +40,7 @@ class HtmlComponentsHelp(object):
                             <ul>
                                 <li><a href="#references_included">
                                 
-                                    References included in Barleymap web
+                                    References included in Prunusmap web
                                     
                                 </a></li>
                             </ul>
@@ -100,7 +100,7 @@ class HtmlComponentsHelp(object):
                     <h2 id="overview">Overview</h2>
                     
                         <br/>
-                        Barleymap was designed to search the genetic and physical positions of barley markers on
+                        Prunusmap was designed to search the genetic and physical positions of barley markers on
                         the <strong>Barley Physical Map</strong> (IBSC<sup>[1]</sup>) and
                         the <strong>POPSEQ</strong> map<sup>[2]</sup>. The strong>Morex Genome</strong><sup>[3]</sup> map
                         was subsequently added in 2017. The current version uses the <strong>MorexV3</strong> genome<sup>[5]</sup> by default.
@@ -354,7 +354,7 @@ class HtmlComponentsHelp(object):
                         
                         <br/><br/>
                         
-                        Besides that, Barleymap is able to use 3 different algorithms when searching maps which have more than one
+                        Besides that, Prunusmap is able to use 3 different algorithms when searching maps which have more than one
                         database associated to it. The details of how these algorithms work can be found
                         <a href="https://github.com/Cantalapiedra/barleymap#4111-alignment-algorithm">here</a>.
                         Here, just a brief description of the maps and databases included in this Barleymap web application,
@@ -615,54 +615,33 @@ class HtmlComponentsHelp(object):
                     <h2 id="references">References</h2>
                 <br/>
                 <!--<section class="help_section">-->
-                
-                    <cite><sup>[1]</sup><a href="http://doi.org/10.1038/nature11543"
-                                            target="_blank">IBSC 2012</a></cite>
-                    <br/>
-                    <cite><sup>[2]</sup><a href="http://doi.org/10.1111/tpj.12319"
-                                            target="_blank">Mascher et al. 2013</a></cite>
-                    <br/>
-                    <cite><sup>[3]</sup><a href="http://doi.org/10.1038/nature22043"
-                                           target="_blank">Mascher et al. 2017</a></cite>
-                    <br/>
-                    <cite><sup>[4]</sup><a href="https://doi.org/10.1186/1471-2164-10-582"
-                                           target="_blank">Close et al. 2009</a></cite>
-                    <br/>
-                    <cite><sup>[5]</sup><a href="http://doi.org/10.1038/ng.2447"
-                                           target="_blank">Comadran et al. 2012</a></cite>
-                    <br/>
-                    <cite><sup>[6]</sup><a href="https://doi.org/10.3389/fpls.2017.01792"
-                                           target="_blank">Bayer et al. 2017</a></cite>
-                    <br/>
-                    <cite><sup>[7]</sup><a href="https://doi.org/10.1073/pnas.0401076101"
-                                           target="_blank">Wenzl et al. 2004</a></cite>
-                    <br/>
-                    <cite><sup>[7']</sup><a href="http://www.diversityarrays.com/dart-map-sequences"
-                                           target="_blank">www.diversityarrays.com</a></cite>
-                    <br/>
-                    <cite><sup>[8]</sup><a href="https://doi.org/10.1007/978-1-61779-870-2_5"
-                                           target="_blank">Kilian et al. 2012</a></cite>
-                    <br/>
-                    <cite><sup>[9]</sup><a href="https://doi.org/10.1371/journal.pone.0032253"
-                                           target="_blank">Poland et al. 2012</a></cite>
-                    <br/>
-                    <cite><sup>[10]</sup><a href="https://doi.org/10.1104/pp.110.171579"
-                                           target="_blank">Matsumoto et al. 2011</a></cite>
-                    <br/>
-                    <cite><sup>[11]</sup><a href="http://harvest.ucr.edu"
-                                           target="_blank">HarvEST</a></cite>
-                    <br/>
-                    <cite><sup>[12]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
+               
+                    <cite><sup>[1]</sup><a href="https://doi.org/10.1038/ng.2586" target="_blank">International Peach Genome Initiative. 2013</a>
+                    </cite><br/>
+            
+                    <cite><sup>[2]</sup><a href="https://doi.org/10.1186%2Fs12864-017-3606-9" target="_blank">Verde et al. 2017</a>
+                    </cite><br/>
+            
+                    <cite><sup>[3]</sup><a href="https://doi.org/10.1111/tpj.14538" target="_blank">Alioto et al. 2020</a>
+                    </cite><br/>
+           
+                    <cite><sup>[4]</sup><a href="https://doi.org/10.1371%2Fjournal.pone.0035668" target="_blank">Verde et al. 2012</a> IRSC 9K markers downloaded from the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
+                    </cite></br>
+            
+                    <cite><sup>[5]</sup>Gasic et al. 2022. Unpublished. IRSC 16K markers downloaded from the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
+                    </cite></br>
+
+                    <cite><sup>[6]</sup><a href="https://doi.org/10.3389/fpls.2022.872208" target="_blank">Guajardo et al. 2022</a>
+                    </cite><br>
+
+                    <cite><sup>[7]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
+                    </cite><br>
+
+                    <cite><sup>[8]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
                                             target="_blank">Wu and Watanabe 2005</a></cite>
                     <br/>
-                    <cite><sup>[13]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
+                    <cite><sup>[9]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
                                             target="_blank">Altschul et al. 1990</a></cite>
-                    <br/>
-                    <cite><sup>[14]</sup><a href="https://doi.org/10.1093/plcell/koab077"
-                                            target="_blank">Mascher et al. 2021</a></cite>
-                    <br/>
-                    <cite><sup>[15]</sup><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6243-7"
-                                            target="_blank">Rapazote-Flores et al. 2019</a></cite>
                     <br/>
                 </section>
                 <br/>
