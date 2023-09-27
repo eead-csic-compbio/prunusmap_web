@@ -214,45 +214,16 @@ class HtmlComponentsHelp(object):
                                 <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
-                           ....
+ ncbi2_genes  old  pd_ncbi2_genes  uniprot_ncbi2_protein
 
 
+                            <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>: identifiers look like E3W0H3_PRUPE.</li>
+                            
+                            <li><b>JGI gene models of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
 
+                            <li><b>NCBI gene models of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like LOC18793189.</li>
 
-                            <li><b>HarvEST Unigenes (assembly #36)</b><sup>[11][10]</sup>: 70148 sequences (e.g.: U36_70143 or U36_998).</li>
-                            
-                            <li><b>IBSC2012 genes</b><sup>[2][*]</sup>: 14,923 HC and 19,415 LC genes (e.g.: MLOC_67805).</li>
-                            
-                            <li><b>IBSC2012 BES</b><sup>[2][*]</sup>: IBSC_2012 and Morex Genome only. More than 400,000 BAC-End sequences
-                            (e.g.: HV_MBa0001A01.f.scf).</li>
-                            
-                            <li><b>IBSC2012 BAC contigs</b><sup>[2][*]</sup>: IBSC_2012 only. 377,144 BAC contigs. 
-                            (e.g. HVVMRX83KHA0104A24_HVVMRXALLhA0391C07_v16_c28)</li>
-                            
-                            <li><b>IBSC2012 WGS contigs (Morex, Barke and Bowman)</b><sup>[2][*]</sup>:
-                            Barke and Bowman contigs mapped in IBSC_2012 and Morex Genome only.
-                            Morex contigs in POPSEQ map also.
-                           (e.g. morex_contig_15371, barke_contig_975766, bowman_contig_387623).</li>
-                            
-                            <li><b>NCBI barley genes</b><sup>[11][*]</sup>: Morex Genome only.
-                            894 sequences (e.g.: AAD02252.1, dhn11, AAF01699.1).</li>
-                            
-                            <li><b>IBSC2016 genes</b><sup>[3][*]</sup>: Morex Genome only.
-                            39,734 HC and 41,949 LC genes.
-                            (e.g.: HORVU1Hr1G000090).</li>
-                            
-                            <li><b>PGSB genes</b><sup>[14]</sup>: MorexV3 only.
-                            35,826 HC and 45,849 LC genes.
-                            (e.g.: HORVU.MOREX.r3.1HG0000030).</li>
-                            
-                            <li><b>BaRT 1.0 gene models</b><sup>[15]</sup>: MorexV3 only.
-                            45,619 genes.
-                            (e.g.: BART1_0-u00002).</li>
-
-                            <li><b>Entrez CDS</b>: MorexV3 only.
-                            292 sequences (e.g.: BAO51910.1, LEA3).</li>						 
-
-                            <li><b>centromers</b>: MorexV3 only.</li>
+                            <li><b>NCBI gene models of <i>Prunus dulcis</i> <sup>[11]</sup>: identifiers look like LOC117629531.</li>
                             
                         </ul>
                         
@@ -617,10 +588,19 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                     <cite><sup>[8]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgky1000" target="_blank">Jung et al. 2019</a>
                     </cite><br>
 
-                    <cite><sup>[9]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
+                    <cite><sup>[9]</sup><a href="https://doi.org/10.1093/nar/gkac1052" target="_blank">The UniProt Consortium. 2023</a>
+                    </cite><br>
+
+                    <cite><sup>[10]</sup><a href="https://doi.org/10.1093/nar/gkr944" target="_blank">Goodstein et al. 2012</a>
+                    </cite><br>
+
+                    <cite><sup>[11]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgkab1112" target="_blank">Sayers et al. 2021</a>
+                    </cite><br>
+
+                    <cite><sup>[12]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
                                             target="_blank">Wu and Watanabe 2005</a></cite>
                     <br/>
-                    <cite><sup>[10]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
+                    <cite><sup>[13]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
                                             target="_blank">Altschul et al. 1990</a></cite>
                     <br/>
                 </section>
