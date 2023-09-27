@@ -189,11 +189,6 @@ class HtmlComponentsHelp(object):
                         
                         <ul class="help_list">
                         
-                    <cite><sup>[7]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
-                    </cite><br>
-
-
-
                             <li>
                                 <b> IRSC 9K markers</b> <i>Prunus persica</i> dataset<sup>[4,8]</sup>: identifiers look like SNP_IGA_134631, snp_scaffold_1_46157131, snp_1_46757382, Pp8Cl or RosCOS1338-411. 
                                 <br/>
@@ -219,11 +214,11 @@ class HtmlComponentsHelp(object):
 
                             <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>: identifiers look like E3W0H3_PRUPE.</li>
                             
-                            <li><b>JGI gene models of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
+                            <li><b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
 
-                            <li><b>NCBI gene models of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like LOC18793189.</li>
+                            <li><b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like LOC18793189.</li>
 
-                            <li><b>NCBI gene models of <i>Prunus dulcis</i> <sup>[11]</sup>: identifiers look like LOC117629531.</li>
+                            <li><b>NCBI gene models</b> of <i>Prunus dulcis</i> <sup>[11]</sup>: identifiers look like LOC117629531.</li>
                             
                         </ul>
                         
