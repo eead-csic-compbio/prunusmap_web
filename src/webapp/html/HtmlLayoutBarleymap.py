@@ -178,37 +178,30 @@ class HtmlLayoutBarleymap(object):
             <br/><br/>
             <hr/>
             <b><a href="{2}">PrunusMap</a></b> was designed to search the position of <em>Prunus</em> genetic markers
-            on the <strong>Prunus Physical Map</strong> (IBSC<sup>[1]</sup>) 
-            ,the <strong>POPSEQ map</strong> (Mascher <i>et al.</i><sup>[2]</sup>) and the 
-            2017 Morex Genome. 
-            The current version was updated to work with the <strong>MorexV3</strong> genome (released in 2021)<sup>[5]</sup>.
-            <br/><br/>
-            
-            All the public data used by PrunusMap can be found at
-            the <a href="https://www.ncbi.nlm.nih.gov/assembly/GCA_904849725.1" target="_blank">NCBI</a>,
-            <a href="https://phytozome-next-jgi.doe.gov/">Phytozome</a>
+            on the Prunus persica cv. Lovell <strong>Physical Maps</strong> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) 
+            and the Prunus dulcis cv. Texas <strong>Physical Map</strong> (NCBI <sup>[3]</sup>).
             <br/><br/>
             
             The <strong><i><a href="{2}/find/">Find markers</a></i></strong> option allows to find the position of markers by using their identifiers as input.
             <br/>Note that those markers must be part of one of the
-            <!--<strong><a href="{0}#barleymap_datasets">-->precalculated datasets<!--</a></strong>--> available (e.g.: Illumina 50K markers).
+            <!--<strong><a href="{0}#prunusmap_datasets">-->precalculated datasets<!--</a></strong>--> available (e.g.: Illumina 16K markers).
             <br/><br/>
             
             To use the <strong><i><a href="{2}/align/">Align sequences</a></i></strong> option you must provide nucleotide sequences of the markers (in FASTA format).
             <br/>These will be used to retrieve their positions through
-            <strong><a href="{0}#references_and_algorithms_used_for_alignment">sequence alignment</a></strong> to the selected map (IBSC2012, POPSEQ, MorexGenome or MorexV3).
+            <strong><a href="{0}#references_and_algorithms_used_for_alignment">sequence alignment</a></strong> to the selected map (ie Pp_NCBI_V2).
             <br/><br/>
             
             The <strong><i><a href="{2}/locate/">Locate by position</a></i></strong> option allows to examine the map context of specific positions,
             which must be provided as tuples with chromosome (or contig) and position (local position, within the chromosome or contig, in base pairs).
-            For example, an user could provide as input "chr1H   10000" to find out which genes are in that specific region of chromosome 1H.
+            For example, an user could provide as input "Pp01   10000" to find out which genes are in that specific region of chromosome 1H.
             <br/><br/>
             
             In addition to locate a list of markers or sequences,
             <strong><a href="{0}#genes_markers_enrichment_and_annotation">information of genes, genetic markers, and anchored features,</a></strong>
             that enrich the context around or between the queries will be shown.<br/><br/>
             
-            <strong><a href="https://github.com/Cantalapiedra/barleymap_web">Barleymap web</a></strong> 
+            <strong><a href="https://github.com/eead-csic-compbio/prunusmap_web">Prunusmap web</a></strong> 
             works on top of <strong><a href="https://github.com/Cantalapiedra/barleymapcore">barleymap core API</a></strong>, used also in a
             <strong><a href="https://github.com/Cantalapiedra/barleymap">standalone application</a></strong>
             that allows loading custom databases, maps and datasets, among other features.
@@ -234,48 +227,57 @@ class HtmlLayoutBarleymap(object):
             <a href="https://doi.org/10.1038/ng.2586" target="_blank">
             The high-quality draft genome of peach (Prunus persica) identifies unique patterns of genetic diversity, domestication and genome evolution.
             </a>
-            Nature Genetics. 2013 May;45(5):487-94. doi: 10.1038/ng.2586
+            Nature Genetics 45(5):487-94. doi: 10.1038/ng.2586
             </cite>
             <br/>
             
-            <cite><sup>[2]</sup>Mascher et al. 2013.
-            <a href="http://onlinelibrary.wiley.com/doi/10.1111/tpj.12319/abstract" target="_blank">
-            Anchoring and ordering NGS contig assemblies by population sequencing (POPSEQ).
+            <cite><sup>[2]</sup>Verde et al. 2017.
+            <a href="https://doi.org/10.1186%2Fs12864-017-3606-9" target="_blank">
+            The Peach v2.0 release: high-resolution linkage mapping and deep resequencing improve chromosome-scale assembly and contiguity.
             </a>
-            The Plant Journal, 76: 718-27. doi:10.1111/tpj.12319
+            BMC Genomics 18(1):225. doi: 10.1186/s12864-017-3606-9
             </cite>
             <br/>
             
-            <cite><sup>[3]</sup>Mascher et al. 2017
-            <a href="https://www.nature.com/articles/nature22043" target="_blank">
-            A chromosome conformation capture ordered sequence of the barley genome
+            <cite><sup>[3]</sup>Alioto et al. 2020.
+            <a href="https://doi.org/10.1111/tpj.14538" target="_blank">
+            Transposons played a major role in the diversification between the closely related almond and peach genomes: results from the almond genome sequence.
             </a>
-            Nature. 544:427-433. doi:10.1038/nature22043
+            Plant J. 101(2):455-472. doi: 10.1111/tpj.14538
             </cite>
             <br/>
-            
-            <cite><sup>[4]</sup>Bayer et al. 2017
-            <a href="https://www.frontiersin.org/articles/10.3389/fpls.2017.01792/full" target="_blank">
-            Development and Evaluation of a Barley 50k iSelect SNP Array
+           
+            <cite><sup>[4]</sup>Verde et al. 2012.
+            <a href="https://doi.org/10.1371%2Fjournal.pone.0035668" target="_blank">
+            Development and evaluation of a 9K SNP array for peach by internationally coordinated SNP detection and validation in breeding germplasm.
             </a>
-            Frontiers in Plant Science. 8:1792. doi:10.3389/fpls.2017.01792
+            PLoS One. 7(6). doi:10.1371/annotation/33f1ba92-c304-4757-91aa-555de64a0768. 
+            IRSC 9K markers downloaded from the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
             </cite>
             </br>
             
-            <cite><sup>[5]</sup>Mascher et al. 2021
-            <a href="https://doi.org/10.1093/plcell/koab077" target="_blank">
-            Long-read sequence assembly: a technical evaluation in barley
-            </a>
-            The Plant Cell 33(6):1888–1906 doi:10.1093/plcell/koab077
+            <cite><sup>[5]</sup>Gasic et al. 2022.
+            IRSC 16K SNP array for Prunus persica. 
+            Unpublished. 
+            IRSC 16K markers downloaded from the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
             </cite>
             </br>
 
-            <cite><sup>[6]</sup>Rapazote-Flores et al. 2019
-            <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6243-7" target="_blank">
-            BaRTv1.0: an improved barley reference transcript dataset to determine accurate changes in the barley transcriptome using RNA-seq
+            <cite><sup>[6]</sup>Guajardo et al. 2022
+            <a href="https://doi.org/10.3389/fpls.2022.872208" target="_blank">
+            QTLs Identification for Iron Chlorosis in a Segregating Peach-Almond Progeny Through Double-Digest Sequence-Based Genotyping (SBG).
             </a>
-            BMC Genomics 20:968 doi:10.1186/s12864-019-6243-7
+            Front. Plant Sci. 13:872208. doi: 10.3389/fpls.2022.872208
             </cite>
+            <br>
+
+            <cite><sup>[7]</sup>Duval et al. 2023
+            <a href="https://doi.org/10.3390/plants12020242" target="_blank">
+            Development and Evaluation of an Ax iomTM 60K SNP Array for Almond (Prunus dulcis).
+            </a>
+            Plants 12(2): 242. doi: 10.3390/plants12020242
+            </cite>
+            <br>
 
 
         """.format(base_url+"/help/", citation, base_url))
