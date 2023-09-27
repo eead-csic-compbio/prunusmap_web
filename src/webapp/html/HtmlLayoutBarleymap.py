@@ -171,7 +171,12 @@ class HtmlLayoutBarleymap(object):
             <br/>
             <br/>27-09-2023:<br/>
             . Added SNP markers from the peach 9k array.
+            <br/> 
+            <br/>278-07-2023:<br/>
+            . Web server and and running.
             <br/>
+
+
         """.format(base_url))
             
         text_buffer.append("""
@@ -188,7 +193,7 @@ class HtmlLayoutBarleymap(object):
             
             To use the <strong><i><a href="{2}/align/">Align sequences</a></i></strong> option you must provide nucleotide sequences of the markers (in FASTA format).
             <br/>These will be used to retrieve their positions through
-            <strong><a href="{0}#references_and_algorithms_used_for_alignment">sequence alignment</a></strong> to the selected map (ie Pp_NCBI_V2).
+            sequence alignment to the selected map (ie Pp_NCBI_V2).
             <br/><br/>
             
             The <strong><i><a href="{2}/locate/">Locate by position</a></i></strong> option allows to examine the map context of specific positions,
@@ -197,7 +202,7 @@ class HtmlLayoutBarleymap(object):
             <br/><br/>
             
             In addition to locate a list of markers or sequences,
-            <strong><a href="{0}#genes_markers_enrichment_and_annotation">information of genes, genetic markers, and anchored features,</a></strong>
+            information of genes, genetic markers, and anchored features,
             that enrich the context around or between the queries will be shown.<br/><br/>
             
             <strong><a href="https://github.com/eead-csic-compbio/prunusmap_web">Prunusmap web</a></strong> 
