@@ -209,9 +209,6 @@ class HtmlComponentsHelp(object):
                                 <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
- ncbi2_genes  old  pd_ncbi2_genes  uniprot_ncbi2_protein
-
-
                             <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>: identifiers look like E3W0H3_PRUPE.</li>
                             
                             <li><b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
@@ -262,7 +259,7 @@ class HtmlComponentsHelp(object):
                         
                         As such, most of the <strong>parameters</strong> are the equivalent to those explained for the "Find markers" tool above.
                         As in "Find markers", the user has to choose a <strong>map</strong> (or maps). Note that when the user chooses a map, he is actually choosing
-                        all the <strong>sequence references</strong> associated to that map (in the internal Barleymap configuration),
+                        all the <strong>sequence references</strong> associated to that map (in the internal Prunusmap configuration),
                         as references for performing the alignments.
                         
                         <br/><br/>
@@ -274,11 +271,11 @@ class HtmlComponentsHelp(object):
                             <li>
                             cdna: it is the recommended option, specially when all the queries come from sequences which could have introns.
                             For example, those from CDS or from markers produced from RNAseq data. All the alignments are performed
-                            using the GMAP aligner<sup>[12][4]</sup>.
+                            using the GMAP aligner<sup>[12]</sup>.
                             </li>
                             
                             <li>
-                            genomic: it uses the most popular alignment tool, BLASTN<sup>[13][3]</sup>, to perform all the alignments.
+                            genomic: it uses the most popular alignment tool, BLASTN<sup>[13]</sup>, to perform all the alignments.
                             </li>
                             
                             <li>
@@ -298,55 +295,46 @@ class HtmlComponentsHelp(object):
                         Besides that, Prunusmap is able to use 3 different algorithms when searching maps which have more than one
                         database associated to it. The details of how these algorithms work can be found
                         <a href="https://github.com/Cantalapiedra/barleymap#4111-alignment-algorithm">here</a>.
-                        Here, just a brief description of the maps and databases included in this Barleymap web application,
-                        and the algorithms used on them, is provided.
+                        Here, just a brief description of the maps and databases included,
+                        and the algorithms, is provided.
                         
                         <br/><br/>
                         
-                        <h3 id="references_included">References included in Barleymap web</h3>
+                        <h3 id="references_included">References included in Prunusmap web</h3>
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                        
 PrunusMap was designed to search the position of Prunus genetic markers on the Prunus persica cv. Lovell Physical Maps (NCBI and Phytozome [1,2]) and the Prunus dulcis cv. Texas Physical Map (NCBI [3]).
+i
+
 
                         <ul class="help_list">
-                            <li><strong>Morex Genome</strong><sup>[3]</sup></li>
+                            <li><strong><i>Pp_NCBI_V1</strong>: Prunus persica</i> cv. Lovell<sup>[1]</sup></li>
                                 <br/>
                                 
-                                The Morex Genome is an actual genome assembly. Most of the datasets precomputed in Barleymap web
-                                are available for this reference (one exception, the IBSC2012 BAC contigs). The main datasets
-                                associated to this physical map are the IBSC2016 HC and LC genes (the "HORVUs"),
-                                the Illumina 50K markers ("JHIs", "SCRIs", etc.), the Morex WGS contigs and the NCBI genes.
+                                The first published peach genome with NCBI annotation<sup>[11]</sup>. 
+                                Chromosome names look like NW_006760385.1, corresponding to assembly GCF_000346465.1.
                                 
                                 <br/><br/>
-                            <li><strong>POPSEQ map</strong><sup>[2]</sup></li>
+                            <li><strong><i>Pp_NCBI_V2</strong>: Prunus persica</i> cv. Lovell<sup>[2]</sup></li>
                                 <br/>
-                                
-                                The POPSEQ map is a genetic map with Morex WGS contigs anchored to it. The main datasets
-                                associated to this map are the IBSC2012 HC and LC genes (the "MLOCs"),
-                                the Illumina 50K markers ("JHIs", "SCRIs", etc.), and the Morex WGS contigs.
+                               
+                                Current peach genome with NCBI annotation<sup>[11]</sup>.
+                                Chromosome names are NC_034009.1 .. NC_034016.1, with unplaced scaffolds from NW_018027148.1 on.
+                                This corresponds to assembly GCF_000346465.2.
                                 
                                 <br/><br/>
-                            <li><strong>IBSC2012 genetic/physical map</strong><sup>[1]</sup></li>
+                            <li><strong>Pp_JGI_V2</strong>: Prunus persica</i> cv. Lovell<sup>[2]</sup></li>
                                 <br/>
-                                
-                                The IBSC2012 genetic and physical map has sequences of different nature anchored to it:
+                               
+                                Current peach genome with chromosome names and gene models from JGI <sup>[10]</sup>.
+                                Chromosome names are Pp01 to Pp08, with unplaced scaffolds from scaffold_12 on.
+
+                            <li><strong>Pd_NCBI_V2</strong>: Prunus dulcis</i> cv. Texas<sup>[3]</sup></li>
                                 <br/>
-                                <ul class="help_list">
-                                    <li>Three <i>WGS</i> assemblies from different cultivars: Morex, Barke and Bowman.</li>
-                                    <li>Morex cultivar sequenced BAC contigs.</li>
-                                    <li>Morex cultivar BAC End sequences.</li>
-                                </ul>
-                                <br/>
-                                
-                                When a search is performed against the IBSC2012 map
-                                an <strong>"exhaustive" algorithm</strong> (see Figure below) is used.
-                                First, the queries are aligned against the first reference, using GMAP, BLASTN or both
-                                depending on the aligner chosen (see above discussion about parameters of "Align sequences").
-                                For every query with a hit in the reference a map position is retrieved.
-                                Those queries without a map position are searched in the second reference.
-                                This is repeated until all the queries have a map position or all the references have
-                                been used once as reference.
-                                The order in which databases are used as alignment target is the same as in the list above.
+                               
+                                Current almond genome with NCBI annotation<sup>[11]</sup>.
+                                Chromosome names are NC_047650.1 to NC_047657.1 with unplaced scaffolds from NW_023010004.1 on.
+                                This corresponds to assembly GCF_902201215.1.
                         </ul>
                         <br/>
                         """.format(base_url))
@@ -375,7 +363,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                         <br/><br/>
                         
                         The input data are "tuples", with chromosome (or contig) and position (local position within the chromosome or contig)
-                        in basepairs or centimorgans (e.g. chr1H 100200).
+                        in basepairs or centimorgans (e.g. NC_034016.1 100200).
                         
                         <br/><br/>
                         
@@ -391,16 +379,16 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                     <hr/>
                     <br/>
                     <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
-                    <h2 id="barleymap_output">Barleymap output</h2>
+                    <h2 id="barleymap_output">Prunusmap output</h2>
                         
                         <br/>
                         
-                        On top of the results page, Barleymap outputs a list of maps selected by the user.
+                        On top of the results page, Prunusmap outputs a list of maps selected by the user.
                         He can use the links on that list to navigate to the results of a specific map.
                         
                         <br/><br/>
                         
-                        For every map which the user selected, Barleymap shows up to five tables of results:
+                        For every map which the user selected, Prunusmap shows up to five tables of results:
                         
                         <ul class="help_list">
                             <li>
@@ -433,7 +421,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                         
                             <br/>
                             
-                            The first result shown by Barleymap is a <strong>graphical representation</strong> of the seven barley chromosomes.
+                            The first result shown by Prunusmap is a <strong>graphical representation</strong> of the chromosomes.
                             Queries with map position are shown on top of those chromosomes.
                             Using the magnifying glass button, the user can toggle between complete chromosomes or just the mapped region.
                             
@@ -446,10 +434,10 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 of the sequence in "Align sequences", or an arbitrary code "chromosome_position" created in "Locate by position".
                                 </li>
                                 <li>chr: chromosome (or contig or equivalent).</li>
-                                <li>cM: centimorgans position. Only for anchored maps with cM positions (IBSC2012 and POPSEQ).</li>
-                                <li>bp: basepairs position. Only for anchored maps with bp positions (IBSC2012).</li>
-                                <li>start: basepairs starting position. Only for physical maps (MorexGenome).</li>
-                                <li>end: basepairs ending position. Only for physical maps (MorexGenome).</li>
+                                <!--<li>cM: centimorgans position. Only for anchored maps with cM positions (IBSC2012 and POPSEQ).</li>-->
+                                <!--<li>bp: basepairs position. Only for anchored maps with bp positions.</li>-->
+                                <li>start: basepairs starting position. Only for physical maps.</li>
+                                <li>end: basepairs ending position. Only for physical maps.</li>
                                 <li>strand: whether the query aligns to the target strand (+) or to the complementary strand (-). Only for physical maps (MorexGenome).</li>
                                 <li>multiple positions: whether the current query sequence has more than one different mapping position in the current map.
                                     <br/>This field is shown only if the "Markers with multiple mappings" option has been selected.
@@ -477,7 +465,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                             plus some additional fields, related to functional annotation of genes:
                             
                             <ul class="help_list">
-                                <li>Gene class: High Confidence or Low Confidence classification.</li>
+                                <!--<li>Gene class: High Confidence or Low Confidence classification.</li>-->
                                 <li>Description: human-readable description of the gene.</li>
                                 <li>InterPro: IPR identifiers for the gene.</li>
                                 <li>GeneOntologies: GO identifiers for the gene.</li>
@@ -489,10 +477,10 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                         
                             <br/>
                             
-                            The <strong>Map with anchored elements</strong> table shows the mapping results along with the elements that are
+                            <!---The <strong>Map with anchored elements</strong> table shows the mapping results along with the elements that are
                             located in the same positions (or regions if the search is extended). In this case, they are not genes or markers;
                             anchored elements have map position but often lack biological meaning (e.g. WGS contigs, BAC contigs, etc.).
-                            The table has the same fields as the Map and the Map with markers tables.
+                            The table has the same fields as the Map and the Map with markers tables.-->
                         
                         
                         
@@ -539,7 +527,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                     <h2 id="disclaimer">Disclaimer</h2>
                         <br/>
                         This service is available AS IS and at your own risk.
-                        EEAD/CSIC do not give any representation or warranty nor assume
+                        EEAD-CSIC do not give any representation or warranty nor assume
                         any liability or responsibility for the service or the results posted
                         (whether as to their accuracy, completeness, quality or otherwise).
                         Access to the service is available free of charge for ordinary use
