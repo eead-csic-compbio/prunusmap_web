@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# HtmlLayoutBarleymap.py is part of Barleymap web app.
+# HtmlLayoutBarleymap.py is part of PrunusMap web app.
 # Copyright (C) 2017  Carlos P Cantalapiedra.
 # (terms of use can be found within the distributed LICENSE file).
 
@@ -84,9 +84,9 @@ class HtmlLayoutBarleymap(object):
         <head>
             <meta charset="utf-8" />
             <title>PrunusMap</title>
-            <meta content="CPCantalapiedra" name="CPCantalapiedra" />
-            <meta content="Map markers to the barley genome" name="Map markers to the barley genome" />
-            <meta content="barley, barleymap, physical map, genetic map, markers, mapping, bioinformatics, blast, gmap, genome, genomics" name="keywords" />
+            <meta content="Najla Ksouri, Bruno Contreras Moreira" name="Najla Ksouri, Bruno Contreras Moreira" />
+            <meta content="Map markers to Prunus genomes" name="Map markers to Prunus genomes" />
+            <meta content="peach, almond, prunusmap, physical map, genetic map, markers, mapping, bioinformatics, blast, gmap, genome, genomics" name="keywords" />
             <link rel="stylesheet" href="{0}" type="text/css" media="screen"/>
         </head>""".format(base_url+"/style.css")
     
@@ -145,10 +145,10 @@ class HtmlLayoutBarleymap(object):
     def title_header(base_url):
         return """
         <header id="top">
-            <h2><a href="{1}/">Barleymap</a></h2>
+            <h2><a href="{1}/"><img src="{1}/img/logo_PrunusMap.png" alt="Logo" class=logo></a></h2>
             <h3 class="infobar">({0})</h3>
         </header>
-        """.format("Map markers to the barley genome - MorexV3 2021 edition", base_url)
+        """.format("Welcome to PrunusMap; a tool to map marker to the <em> Prunus </em> genomes", base_url)
     
     @staticmethod
     def footer():
@@ -177,19 +177,16 @@ class HtmlLayoutBarleymap(object):
         text_buffer.append("""
             <br/><br/>
             <hr/>
-            <b><a href="{2}">Barleymap</a></b> was designed to search the position of barley genetic markers
-            on the <strong>Barley Physical Map</strong> (IBSC<sup>[1]</sup>) 
+            <b><a href="{2}">PrunusMap</a></b> was designed to search the position of <em>Prunus</em> genetic markers
+            on the <strong>Prunus Physical Map</strong> (IBSC<sup>[1]</sup>) 
             ,the <strong>POPSEQ map</strong> (Mascher <i>et al.</i><sup>[2]</sup>) and the 
             2017 Morex Genome. 
             The current version was updated to work with the <strong>MorexV3</strong> genome (released in 2021)<sup>[5]</sup>.
             <br/><br/>
             
-            All the public data used by Barleymap can be found at
-            <a href="https://www.helmholtz-muenchen.de/pgsb/index.html" target="_blank">PGSB</a>
-            , <a href="https://galaxy-web.ipk-gatersleben.de/" target="_blank">IPK</a> 
-            , <a href="http://doi.org/10.5447/ipk/2021/3" target="_blank">e!DAL</a>
-            , <a href="https://ics.hutton.ac.uk/barleyrtd" target="_blank">Barley RTD</a>
-            and the <a href="https://www.ncbi.nlm.nih.gov/assembly/GCA_904849725.1" target="_blank">NCBI</a>.
+            All the public data used by PrunusMap can be found at
+            the <a href="https://www.ncbi.nlm.nih.gov/assembly/GCA_904849725.1" target="_blank">NCBI</a>,
+            <a href="https://phytozome-next-jgi.doe.gov/">Phytozome</a>
             <br/><br/>
             
             The <strong><i><a href="{2}/find/">Find markers</a></i></strong> option allows to find the position of markers by using their identifiers as input.
