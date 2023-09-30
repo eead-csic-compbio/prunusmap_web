@@ -169,6 +169,9 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>29-09-2023:<br/>
+            . added first version of <em>Prunus persica</em> genome from JGI
+            <br/>
             <br/>27-09-2023:<br/>
             . Added SNP markers from the peach 9k array.
             <br/> 
