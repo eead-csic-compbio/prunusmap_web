@@ -169,6 +169,10 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>01-10-2023:<br/>
+            . added SNP markers from peach 16k array
+            . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2
+            . added 60k Axiom SNP markers 
             <br/>29-09-2023:<br/>
             . added first version of <em>Prunus persica</em> genome from JGI
             <br/>
