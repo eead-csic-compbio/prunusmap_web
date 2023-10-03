@@ -102,7 +102,7 @@ class HtmlComponentsHelp(object):
                         <br/>
 
                         Prunusmap was designed to search the genetic and physical positions of <em>Prunus</em> genetic markers
-                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> <sup>[3]</sup>).
+                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> (NCBI and GDR) <sup>[3,15,16]</sup>).
                         The current version uses the <strong>Pp_NCBI_V2</strong> map<sup>[5]</sup> by default.
                         <br/><br/>
                         Prunusmap provides <strong>three tools</strong> to retrieve data from the maps:
@@ -331,10 +331,27 @@ i
 
                             <li><strong>Pd_NCBI_V2</strong>: Prunus dulcis</i> cv. Texas<sup>[3]</sup></li>
                                 <br/>
-                               
+                    
                                 Current almond genome with NCBI annotation<sup>[11]</sup>.
                                 Chromosome names are NC_047650.1 to NC_047657.1 with unplaced scaffolds from NW_023010004.1 on.
                                 This corresponds to assembly GCF_902201215.1.
+
+                            <li><strong>Pd_Texas_GDR_V2</strong>: Prunus dulcis</i> cv. Texas<sup>[3]</sup></li>
+                                <br/>
+                    
+                                Chromosome names are Pd01 to Pd08 with unplaced scaffolds from pdulcis26_s034 on.
+                                This corresponds to assembly GCF_902201215.1.
+                            <li><strong>Pd_Nonpareil_GDR_V1</strong>: Prunus dulcis</i> cv. Nonpareil<sup>[15]</sup></li>
+                                <br/>
+
+                                Chromosome names are CM037988.1 to CM037995.1 with unplaced scaffolds from AJFAZ020000011.1 on.
+                                This corresponds to assembly GCA_021292205.
+                            <li><strong>Pd_Lauranne_GDR_V1</strong>: Prunus dulcis</i> cv. Lauranne<sup>[16]</sup></li>
+                                <br/>
+
+                                Chromosome names are Pd01 to Pd08.
+                                This corresponds to assembly <a href="https://www.ebi.ac.uk/ena/browser/view/AP019297-AP019304">AP019297-AP019304</a>.
+
                         </ul>
                         <br/>
                         """.format(base_url))
@@ -586,6 +603,15 @@ i
                     <cite><sup>[13]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
                                             target="_blank">Altschul et al. 1990</a></cite>
                     <br/>
+
+                    <cite><sup>[15]</sup><a href="https://doi.org/10.1093/g3journal/jkac097"
+                                            target="_blank">D'Amico-Willman et al. 2022</a></cite>
+                    <br/>
+
+                    <cite><sup>[16]</sup><a href="https://doi.org/10.1126/science.aav8197"
+                                            target="_blank">Sanchez-Perez et al. 2019</a></cite>
+                    <br/>
+
                 </section>
                 <br/>
                 <hr/>
