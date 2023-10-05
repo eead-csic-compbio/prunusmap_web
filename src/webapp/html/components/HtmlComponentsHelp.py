@@ -209,7 +209,7 @@ class HtmlComponentsHelp(object):
                                 <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
-                            <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>: identifiers look like E3W0H3_PRUPE.</li>
+                            <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.</li>
                             
                             <li><b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
 
