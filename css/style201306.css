@@ -6,13 +6,24 @@
 
 
 /* General and headers */
-body {margin:0;padding:0;font: normal 15px "Trebuchet MS",Arial,Helvetica,sans-serif;}
+body {margin:0;padding:0;font: normal 15px "Georgia" ;}
 
 header{
     padding-top:1em;
     margin: 0 auto;
-    background:#FFCC77;
-    color: #000055;
+    background: ghostwhite;
+    color: black;
+    border-color: darkgreen;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width:2px;
+}
+
+/* add logo style */
+.logo {
+	max-width: 400px;
+	vertical-align: middle;	
+	
 }
     
 h1, h2, h3 { padding:0;text-align:center;vertical-align: middle }
@@ -57,7 +68,7 @@ p { margin-top:0;padding-top:0;text-align:justify;line-height:18px; }
 #menu ul{font-style: normal;font-size:15px}
 
 #main_text{
-    background-color:#FFEEDD;
+    background-color:#e6fad4;
     color: #000055;
     font-size: 12px;
     margin: 0 1% 0 1%;
@@ -110,13 +121,13 @@ header a {
 }
 
 .infobar{
-    border-top:dashed thin grey;
+    border-top:dashed thin darkgreen;
     border-bottom: solid thin black;
-    padding: 2px 0 2px 0;
-    background-color:#FFAA55;
+    padding: 5px 0 5px 0;
+    background-color:#77b562;
     color:black;
-    font-family: monospace;
-    font-size: 8pt;
+    font-family: Centrury Schoolbook;
+    font-size: 12pt;
     font-weight: 100;
 }
 
@@ -126,7 +137,7 @@ input.demobutton{
     font-weight:bold;
     width:50px;
     background-color:#0080FF;
-    border-color:#0066CC;
+    border-color:#000305;
     border-width:1px;
 }
 
@@ -134,7 +145,7 @@ input.demobutton{
     cursor:pointer;
     display: inline;
     width:50px;
-    background-color:#FF0000;
+    background-color:red;
 }
 
 #align_demo_button{
@@ -163,14 +174,14 @@ input.demobutton{
     cursor:pointer;
     display:inline;
     width:90px;
-    background-color:#FF8000;
+    background-color:#72befc;
 }
 
 #find_demo_button_region{
     cursor:pointer;
     display:inline;
     width:80px;
-    background-color:#FF6000;
+    background-color:#0080FF;
 }
 
 #find_clear_file_button{
@@ -233,13 +244,13 @@ input.demobutton{
 #align_fieldset{
     text-align:center;
     width:300px;
-    height:80px;
+    height:100px;
 }
 
 #find_fieldset{
     text-align:center;
-    width:200px;
-    height:80px;
+    width:300px;
+    height:100px;
 }
 
 #submit_button{
