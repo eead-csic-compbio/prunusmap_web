@@ -148,7 +148,7 @@ class HtmlLayoutBarleymap(object):
             <h2><a href="{1}/"><img src="{1}/img/logo_PrunusMap.png" alt="Logo" class=logo></a></h2>
             <h3 class="infobar">({0})</h3>
         </header>
-        """.format("Welcome to PrunusMap; a tool to map marker to the <em> Prunus </em> genomes", base_url)
+        """.format("Welcome to PrunusMap; a tool to map markers to the <em> Prunus </em> genomes", base_url)
     
     @staticmethod
     def footer():
@@ -170,9 +170,8 @@ class HtmlLayoutBarleymap(object):
             <br/><strong>Latest changes</strong>
             <br/>
             <br/>01-10-2023:<br/>
-            . added SNP markers from peach 16k array
-            . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2
-            . added 60k Axiom SNP markers 
+            . added SNP markers from peach 16k array and 60k Axiom SNP: markers</br> 
+            . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2</br>
             <br/>29-09-2023:<br/>
             . added first version of <em>Prunus persica</em> genome from JGI
             <br/>
@@ -190,7 +189,7 @@ class HtmlLayoutBarleymap(object):
             <br/><br/>
             <hr/>
             <b><a href="{2}">PrunusMap</a></b> was designed to search the position of <em>Prunus</em> genetic markers
-            on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> <sup>[3]</sup>).
+            on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> (NCBI and GDR) <sup>[3,8,9]</sup>).
             <br/><br/>
             
             The <strong><i><a href="{2}/find/">Find markers</a></i></strong> option allows to find the position of markers by using their identifiers as input.
@@ -205,7 +204,7 @@ class HtmlLayoutBarleymap(object):
             
             The <strong><i><a href="{2}/locate/">Locate by position</a></i></strong> option allows to examine the map context of specific positions,
             which must be provided as tuples with chromosome (or contig) and position (local position, within the chromosome or contig, in base pairs).
-            For example, an user could provide as input "Pp01   10000" to find out which genes are in that specific region of chromosome 1H.
+            For example, an user could provide as input "Pp01   10000" to find out which genes are in that specific region of chromosome Pp01.
             <br/><br/>
             
             In addition to locate a list of markers or sequences,
@@ -225,7 +224,7 @@ class HtmlLayoutBarleymap(object):
             <br/>
             Or you may wish to <strong>contact</strong> the <a href="https://www.eead.csic.es/compbio/" target="_blank">Computational and structural biology group</a>
             (<a href="https://www.eead.csic.es">EEAD</a> - <a href="https://www.csic.es">CSIC</a>):<br/>
-            <a href="mailto:bcontreras@eead.csic.es">Bruno Contreras-Moreira</a>
+            <a href="mailto:compbio@eead.csic.es">compbio@eead.csic.es</a>
             <br/><br/>
             
             <strong>Citations:</strong>
@@ -290,6 +289,21 @@ class HtmlLayoutBarleymap(object):
             </cite>
             <br>
 
+            <cite><sup>[8]</sup>D'Amico-Willman et al. 2022
+            <a href="https://doi.org/10.1093/g3journal/jkac097" target="_blank">
+            Whole-genome sequence and methylome profiling off the almond (Prunus dulcis [Mill.] D.A.Webb) cultivar 'Nonpareil'.
+            </a>
+            G3 (Bethesda) 12(5):jkac065. doi: 10.1093/g3journal/jkac065
+            </cite>
+            <br>
+
+            <cite><sup>[9]</sup>Sanchez-Perez et al. 2019
+            <a href="https://doi.org/10.1126/science.aav8197" target="_blank">
+            Mutation  of a bHLH transcription factor allowed almond domestication.
+            </a>
+            Science 364(6445):1095-1098. doi: 10.1126/science.aav8197
+            </cite>
+            <br>
 
         """.format(base_url+"/help/", citation, base_url))
         
