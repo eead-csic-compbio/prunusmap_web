@@ -226,7 +226,10 @@ class HtmlLayoutBarleymap(object):
             (<a href="https://www.eead.csic.es">EEAD</a> - <a href="https://www.csic.es">CSIC</a>):<br/>
             <a href="mailto:compbio@eead.csic.es">compbio@eead.csic.es</a>
             <br/><br/>
-            
+           
+            <strong>Funding:</strong><br/>
+            This work was funded by CSIC [grants 2020AEP119 & FAS2022_052], the Spanish Research Agency [grants AGL2017-83358-R MCIN/AEI/10.13039/501100011033 & "A way of making Europe"] and the Government of Arag&oacute;n [grants A44, A09_23R, A10_23R & PhD contract to Najla Ksouri 2018-2023], which were co-financed with FEDER funds.<br/><br/>
+
             <strong>Citations:</strong>
             <a href="http://link.springer.com/article/10.1007%2Fs11032-015-0253-1">{1}</a>
             <br/><br/>
