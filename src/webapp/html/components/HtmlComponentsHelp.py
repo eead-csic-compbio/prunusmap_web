@@ -209,13 +209,19 @@ class HtmlComponentsHelp(object):
                                 <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
-                            <li><b>UniProt proteins</b> <i>Prunus persica</i> dataset <sup>[9]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.</li>
+                            <li><b>UniProt proteins</b> of <i>Prunus persica</i> dataset <sup>[9]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.</li>
                             
-                            <li><b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like Prupe.1G000100.</li>
+                            <li><b>UniProt proteins of <i>Prunus dulcis</i> cv.Texas_NCBIv2: identifiers looks like A0A1W6CB65_PRUDU </li>
+                            
+                            <li><b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like ppa000003m.g and Prupe.1G000100 for respectively v1 and v2.</li>
 
-                            <li><b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like LOC18793189.</li>
+                            <li><b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like PRUPE_ppa017353mg and LOC18793189 for respectively v1 and v2.</li>
 
                             <li><b>NCBI gene models</b> of <i>Prunus dulcis</i> <sup>[11]</sup>: identifiers look like LOC117629531.</li>
+
+                            <li><b>GDR gene models of <i>Prunus dulcis</i> cv.Lauranne_v1: identifiers look like Prudu_020918_v1.0.</li>
+
+                            <li><b>GDR gene models of <i>Prunus dulcis</i> cv.Nonpareil_v1: identifiers look like L3X38_000408.</li>
                             
                         </ul>
                         
@@ -244,7 +250,7 @@ class HtmlComponentsHelp(object):
                         
                         <ul class="help_list">
                             <li>
-                            Barleymap results are map positions, which may come from different sequence references,
+                            PrunusMap results are map positions, which may come from different sequence references,
                             which are searched in a pan-genome or multi-reference fashion.
                             </li>
                             
@@ -303,7 +309,7 @@ class HtmlComponentsHelp(object):
                         <h3 id="references_included">References included in Prunusmap web</h3>
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                        
-PrunusMap was designed to search the position of Prunus genetic markers on the Prunus persica cv. Lovell Physical Maps (NCBI and Phytozome [1,2]) and the Prunus dulcis cv. Texas Physical Map (NCBI [3]).
+PrunusMap was designed to search the position of Prunus genetic markers on the Prunus persica cv. Lovell Physical Maps (NCBI and Phytozome [1,2]) and the Prunus dulcis cv. Texas, Lauranne and Non_pareil Physical Maps (NCBI [3], GDR [15] and [16]).
 i
 
 
