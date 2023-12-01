@@ -148,7 +148,7 @@ class HtmlLayoutBarleymap(object):
             <h2><a href="{1}/"><img src="{1}/img/logo_PrunusMap.png" alt="Logo" class=logo></a></h2>
             <h3 class="infobar">({0})</h3>
         </header>
-        """.format("Welcome to PrunusMap; a tool to map markers to the <em> Prunus </em> genomes", base_url)
+        """.format("Welcome to PrunusMap; a toolkit to map markers to the <em> Prunus </em> genomes", base_url)
     
     @staticmethod
     def footer():
@@ -169,6 +169,8 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>01-12-2023:<br/>
+            . added Prunus dulcis cv.Texas_NCBIv2 Uniprot Proteins</br>
             <br/>01-10-2023:<br/>
             . added SNP markers from peach 16k array and 60k Axiom SNP: markers</br> 
             . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2</br>
