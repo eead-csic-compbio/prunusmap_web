@@ -1,17 +1,16 @@
 
 ## Contents
 
- - 1: [Barleymap overview](https://github.com/Cantalapiedra/barleymap#1-barleymap-overview)
+ - 1: [PrunusMap overview](https://github.com/Cantalapiedra/barleymap#1-barleymap-overview)
  - 2: [Prerequisites](https://github.com/Cantalapiedra/barleymap#2-prerequisites)
  - 3: [Installation and configuration](https://github.com/Cantalapiedra/barleymap#3-installation-and-configuration)
  - 4: [Tools and algorithms](https://github.com/Cantalapiedra/barleymap#4-tools-and-algorithms)
  
-## 1) Barleymap overview
+## 1) PrunusMap overview
 
-**Barleymap** is a tool which allows searching the position of sequences
-in sequence-enriched genetic/physical maps.
+**PrunusMap** is a derivative of Barleymap and it was created as a fork of the original resource (Cantalapiedra et al., 2015). It's a toolkit designed to provide the map positions for user-defined queries in genetic/physical maps.
 
-Barleymap was designed with **3 main goals** in mind:
+PrunusMap was designed with **3 main goals** in mind:
 - Provide the position of sequences in a map, hiding from the user the details of the alignment and mapping steps.
 - Facilitate inspecting the region surrounding the queried sequence. ¿Which other markers, genes, etc are in the region?
 - Perform alignments in a multi-reference or pan-genome fashion, allowing to query several databases at a time.
@@ -33,7 +32,7 @@ Note that a map can store positions of sequences from one or more databases.
 - Datasets: tables which store the map position of loci often used as queries (markers, genes, etc.)
 to a specific map, so that it can be queried without repeating the alignment step.
 
-Barleymap has 3 different groups of **tools**, which are further explained in following sections:
+PrunusMap has 3 different groups of **tools**, which are further explained in following sections:
 - Main tools:
   - bmap_align ("Align sequences" in the web version).
   - bmap_find ("Find markers" in the web version).
@@ -50,12 +49,12 @@ Barleymap has 3 different groups of **tools**, which are further explained in fo
 
 - Python 2.6 or superior.
 - To perform sequence alignments barleymap will need
-either BLASTN, HS-BLASTN and/or GMAP sequence aligners.
+either BLASTN and GMAP sequence aligners.
 
 The following builds have been tested:
 - Blast: ncbi-blast-2.2.27+
 - GMAP: gmap-2013-11-27 and gmap-2013-08-31
-- HS-blastn: hs-blastn-0.0.5+
+
 
 Other versions of the previous aligners could also work with barleymap,
 as long as the aligner parameters or its output format remain as in the versions above.
@@ -87,7 +86,7 @@ export PYTHONPATH=$PYTHONPATH:/home/$USER/apps/barleymap/
 
 #### 3.1.2) Web version
 
-The barleymap web interface was designed to be used with a [CherryPy server](http://cherrypy.org/),
+The PrunusMap web interface was designed to be used with a [CherryPy server](http://cherrypy.org/),
 which should be installed and configured independently.
 
 Those interested on running their own barleymap web servers should check the CherryPy documentation
@@ -100,12 +99,12 @@ ProxyPass /barleymap http://127.0.0.1:$CHERRYPYPORT/barleymap/
 ProxyPassReverse /barleymap http://127.0.0.1:$CHERRYPYPORT/barleymap/
 ```
 
-Barleymap web versions includes three shell scripts
+PrunusMap web versions includes three shell scripts
 (_START, _RESTART and _STOP) to make it easier to
 start, restart and stop the application server.
 
 Note that besides the configuration steps detailed in the next sections,
-for the barleymap web application it could be required, depending on the environment,
+for the PrunusMap web application it could be required, depending on the environment,
 to configure the *src/bmap.conf* and *src/server.conf* files.
 
 ### 3.2) Configuration
@@ -116,7 +115,7 @@ to configure the *src/bmap.conf* and *src/server.conf* files.
 - 3.2.4: [Datasets: the *datasets.conf* file](https://github.com/Cantalapiedra/barleymap#324-datasets-the-datasetsconf-file)
 - 3.2.5: [Annotations: the *datasets_annotation.conf* file](https://github.com/Cantalapiedra/barleymap#325-annotations-the-datasets_annotationconf-file)
    
-To configure barleymap you will need to edit the following **configuration files**
+To configure PrunusMap you will need to edit the following **configuration files**
 under the *barleymap/conf* directory:
 
 - *paths.conf*
@@ -125,7 +124,7 @@ under the *barleymap/conf* directory:
 - *datasets.conf*
 - *datasets_annotation.conf*
 
-Note that barleymap is distributed with *.sample* files, which are just examples of the previous configuration
+Note that PrunusMap is distributed with *.sample* files, which are just examples of the previous configuration
 files. You could use them as templates to create you own configuration files.
 Just remember that the ones actually used by barleymap must not have the *.sample* suffix.
 
@@ -160,9 +159,6 @@ blastn_dbs_path PATH_TO_BLAST_DATABASES
 gmap_app_path PATH_TO_GMAP/bin/gmap
 gmap_dbs_path PATH_TO_GMAP_DATABASES
 gmapl_app_path PATH_TO_GMAP/bin/gmapl
-# HS-Blastn
-hsblastn_app_path PATH_TO_HSBLASTN/hs-blastn-src/hs-blastn
-hsblastn_dbs_path PATH_TO_HSBLASTN_DATABASES
 
 ########### Other
 citation Cantalapiedra_CP,_Boudiar_R,_Casas_AM,_Igartua_E,_Contreras-Moreira_B._BARLEYMAP:_physical_and_genetic_mapping_of_nucleotide_sequences_and_annotation_of_surrounding_loci_in_barley._Mol_Breeding_(2015)_35:13_DOI_10.1007/s11032-015-0253-1
