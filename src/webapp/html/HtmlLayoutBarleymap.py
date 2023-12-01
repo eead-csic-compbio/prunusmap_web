@@ -171,6 +171,7 @@ class HtmlLayoutBarleymap(object):
             <br/>
             <br/>01-12-2023:<br/>
             . added Prunus dulcis cv.Texas_NCBIv2 Uniprot Proteins</br>
+            . added Adafuel markers</br>
             <br/>01-10-2023:<br/>
             . added SNP markers from peach 16k array and 60k Axiom SNP: markers</br> 
             . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2</br>
