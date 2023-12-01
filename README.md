@@ -347,14 +347,19 @@ alignment in this map, independently of whether has more than one position or no
 A "chrom" file has the information about the name and size of the chromosomes of a map. For example:
 
 ```
-chr1H	1	558535432
-chr2H	2	768075024
-chr3H	3	699711114
-chr4H	4	647060158
-chr5H	5	670030160
-chr6H	6	583380513
-chr7H	7	657224000
-chrUn	8	249774706
+NC_014697.1	1	157790
+NC_034009.1	2	47851208
+NC_034010.1	3	30405870
+NC_034011.1	4	27368013
+NC_034012.1	5	25843236
+NC_034013.1	6	18496696
+NC_034014.1	7	30767194
+NC_034015.1	8	22388614
+NC_034016.1	9	22573980
+NW_018027148.1	10	167479
+NW_018027149.1	11	69962
+NW_018027150.1	12	72028
+
 ```
 
 Each row has 3 or 4 (depending whether the map has cM, bp or both types of position) **tab-delimited fields**:
