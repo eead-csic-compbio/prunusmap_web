@@ -290,7 +290,7 @@ The *maps.conf.sample* file shows 3 maps as **examples**:
 
 ```
 #name         id            has_cm    has_bp    default_pos_type  map_type  search_type   db_list                                 folder_name        main_datasets
-MapName       mapID         cm_false  bp_true   bp                physical  greedy        db_genome                               mapID_folder       dataset1,dataset2,dataset3
+PrunusMap     pp_ncbi2      cm_false  bp_true   bp                physical  greedy        Prunus_persica_NCBIv2                   mapID_folder       dataset1,dataset2,dataset3
 Map2          map2          cm_true   bp_false  cm                anchored  hierarchical  db_anchored1                            map2_dir           dataset4
 PhysGenetMap  physgenetmap  cm_true   bp_true   cm                anchored  exhaustive    db_anchored1,db_anchored2,db_anchored3  physgenetmap_path  dataset3,dataset5
 ```
