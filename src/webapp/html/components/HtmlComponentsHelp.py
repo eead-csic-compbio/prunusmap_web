@@ -230,11 +230,11 @@ class HtmlComponentsHelp(object):
                             </li>
 
                             <li>
-                                <b>GDR gene models</br> of <i>Prunus dulcis</i> cv.Lauranne_v1: identifiers look like Prudu_020918_v1.0.
+                                <b>GDR gene models</b> of <i>Prunus dulcis</i> cv.Lauranne_v1: identifiers look like Prudu_020918_v1.0.
                             </li>
 
                             <li>
-                                <b>GDR gene models</br> of <i>Prunus dulcis</i> cv.Nonpareil_v1: identifiers look like L3X38_000408.
+                                <b>GDR gene models</b> of <i>Prunus dulcis</i> cv.Nonpareil_v1: identifiers look like L3X38_000408.
                             </li>
                             
                         </ul>
