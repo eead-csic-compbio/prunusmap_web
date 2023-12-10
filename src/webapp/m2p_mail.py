@@ -29,7 +29,7 @@ def send_files(form, filenames, filedescs, email_conf):
         # Create the enclosing (outer) message
         email_from = email_dict[MAIL_SENDER]
         
-        outer = __create_outer_msg(email_from, email_to, 'Markers mapped to barleymap')
+        outer = __create_outer_msg(email_from, email_to, 'Markers mapped to PrunusMap')
         
         # Main Text
         email_text = MIMEText(params, _subtype='plain')
