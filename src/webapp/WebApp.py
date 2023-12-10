@@ -75,7 +75,7 @@ class Root():
         except Exception, e:
             sys.stderr.write(str(e)+"\n")
             traceback.print_exc(file=sys.stderr)
-            output = "There was a server error. Please, contact with barleymap web application adminitrators."
+            output = "There was a server error. Please, contact with PrunusMap web application administrators."
         
         return output
     
@@ -135,7 +135,7 @@ class Root():
         except Exception, e:
             sys.stderr.write(str(e)+"\n")
             traceback.print_exc(file=sys.stderr)
-            output = "There was a server error. Please, contact with barleymap web application adminitrators."
+            output = "There was a server error. Please, contact with PrunusMap web application administrators."
         
         return output
     
@@ -198,7 +198,7 @@ class Root():
         except Exception, e:
             sys.stderr.write(str(e)+"\n")
             traceback.print_exc(file=sys.stderr)
-            output = "There was a server error. Please, contact with barleymap web application adminitrators."
+            output = "There was a server error. Please, contact with PrunusMap web application administrators."
         
         return output
     
@@ -259,7 +259,7 @@ class Root():
         except Exception, e:
             sys.stderr.write(str(e)+"\n")
             traceback.print_exc(file=sys.stderr)
-            output = "There was a server error. Please, contact with barleymap web application adminitrators."
+            output = "There was a server error. Please, contact with PrunusMap web application administrators."
         
         return output
     
@@ -293,7 +293,7 @@ class Root():
         except Exception, e:
             sys.stderr.write(str(e)+"\n")
             traceback.print_exc(file=sys.stderr)
-            output = "There was a server error. Please, contact with barleymap web application adminitrators."
+            output = "There was a server error. Please, contact with PrunusMap web application administrators."
         
         return output
 
