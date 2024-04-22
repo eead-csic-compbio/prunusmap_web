@@ -800,12 +800,12 @@ A0A5E4ELU2_PRUDU\n");
     
     // LOAD DEMO POSITIONS
     $("#locate_demo_button").click(function(){
-        $("#locate_query").text("Pd02	26138581\n\
-pdulcis26_s0573	87287\n\
-NC_034696.1	157723\n\
-scaffold_10	851981\n\
-Pp01	47851208\n\
-NW_006760184.1	9539\n");
+        $("#locate_query").text("Pd01	45101\n\
+scaffold_1	357025\n\
+NC_034009.1	97464\n\
+CM037988.1	163919\n\
+Pp01	12696333\n\
+NW_006760194.1	137441\n");
 //chr1H	81042669\n\
 //chr2H	711398163\n\
 //chr6H	376635036\n\
