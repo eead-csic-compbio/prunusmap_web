@@ -172,7 +172,7 @@ class HtmlLayoutBarleymap(object):
             <br/>19-05-2024:<br/>
             . added the cultivar extension "Lovell" to Prunus persica maps </br>
             <br/>29-03-2024:<br/>
-            . posted preprint <a href="https://doi.org/10.1101/2024.03.26.586732">https://doi.org/10.1101/2024.03.26.586732</a><br/>
+            . posted bioRxiv preprint <a href="https://doi.org/10.1101/2024.03.26.586732">https://doi.org/10.1101/2024.03.26.586732</a><br/>
             <br/>01-12-2023:<br/>
             . added Prunus dulcis cv.Texas_NCBIv2 Uniprot Proteins</br>
             . added Adafuel markers</br:>
