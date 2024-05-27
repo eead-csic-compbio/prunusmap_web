@@ -169,6 +169,9 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>20-05-2024:<br/>
+            . added new map for Prunus persica cv "ChineseCling" from GDR </br>
+            . added new map for Prunus persica cv "Zhongyoutao14" from GDR </br>
             <br/>19-05-2024:<br/>
             . added the cultivar extension "Lovell" to Prunus persica maps </br>
             <br/>29-03-2024:<br/>

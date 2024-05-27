@@ -3,6 +3,7 @@
 
 # HtmlLayout.py is part of Barleymap web app.
 # Copyright (C) 2017  Carlos P Cantalapiedra.
+# Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 # (terms of use can be found within the distributed LICENSE file).
 
 from components.HtmlComponents import HtmlComponents
@@ -80,6 +81,13 @@ class HtmlLayout(object):
         
         return align_components
     
+    def prot_components(self, align_form, maps_config):
+
+        prot_components = HtmlComponents.prot(self._base_url, align_form, PREFIX_UI_CTRLS_ALIGN,
+                                                maps_config)
+
+        return prot_components
+
     def find_components(self, find_form, maps_config):
         
         find_components = HtmlComponents.find(self._base_url, find_form, PREFIX_UI_CTRLS_FIND,
