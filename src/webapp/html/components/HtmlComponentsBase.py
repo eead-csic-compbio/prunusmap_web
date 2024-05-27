@@ -3,6 +3,7 @@
 
 # HtmlComponentsBase.py is part of Barleymap web app.
 # Copyright (C) 2017 Carlos P Cantalapiedra.
+# Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 # (terms of use can be found within the distributed LICENSE file).
 
 import sys
@@ -361,7 +362,57 @@ class HtmlComponentsBase(object):
                 """)
         
         return "".join(output)
-    
+   
+    @staticmethod
+    def _load_prot_alignment_area(threshold_id, threshold_cov):
+        output = []
+
+        output.append("""
+                <fieldset id="alignment_fieldset" style="border:solid thin;">
+                <legend>Choose an action:</legend>
+                    <select name="aligner" id="aligner">
+                    """)
+
+        output.append('             <option value="miniprot" selected>protein sequences</option>')
+
+        output.append("""
+                    </select>
+                    <span id="algorithm_text" class="explain_text">Perform a MINIPROT search. Input must be protein sequences in FASTA format.</span>
+                    <br/>
+                    <br/>
+                    <label for="threshold_id">min. id.</label>
+                    <input type="number" name="threshold_id" id="threshold_id" pattern="[0-9]+[\.][0-9]+" step="0.1" min="0.1" max="100.0"
+                        """)
+
+        ############# ALIGNMENT THRESHOLDS
+        #if not threshold_id or threshold_id == "":
+        #    myvar = ' value="'+str(def_threshold_id)+'"'
+        #    output.append(myvar)
+        #else:
+        myvar = ' value="'+str(threshold_id)+'"' # If I dont do the cast, it crashes
+        output.append(myvar)
+
+        output.append("""
+                            style="text-align:right;width:4em"/>
+                    
+                    <label for="threshold_cov">min. query cov.</label>
+                    <input type="number" name="threshold_cov" id="threshold_cov" pattern="[0-9]+[\.][0-9]+" step="0.1" min="0.1" max="100.0"
+                        """)
+        #if not threshold_cov or threshold_cov == "":
+        #    myvar = ' value="'+str(def_threshold_cov)+'"'
+        #    output.append(myvar)
+        #else:
+        myvar = ' value="'+str(threshold_cov)+'"' # If I dont do the cast, it crashes
+        output.append(myvar)
+
+        output.append("""
+                            style="text-align:right;width:4em"/>
+                    </fieldset>
+                    """)
+
+        return "".join(output)
+
+
     @staticmethod
     def _load_alignment_area(aligner, threshold_id, threshold_cov):
         output = []
@@ -382,7 +433,7 @@ class HtmlComponentsBase(object):
             output.append('             <option value="gmap,blastn" selected>auto</option>')
         else:
             output.append('             <option value="gmap,blastn">auto</option>')
-            
+             
         if aligner == "gmap":
             output.append('             <option value="gmap" selected>cdna</option>')
         else:
@@ -392,7 +443,7 @@ class HtmlComponentsBase(object):
             output.append('             <option value="blastn" selected>genomic</option>')
         else:
             output.append('             <option value="blastn">genomic</option>')
-                        
+   
         output.append("""
                     </select>
                     <span id="algorithm_text" class="explain_text">Perform a BLASTN search. Input data must be in FASTA format.</span>
