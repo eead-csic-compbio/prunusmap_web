@@ -23,13 +23,14 @@ class MappingResult(object):
     _other_alignments = False
     _map_name = ""
     _feature = None
+    _genetic = ""
     
     _empty = False
     
     MAP_FIELDS = 7
     
     def __init__(self, marker_id, chrom_name, chrom_order,
-                 cm_pos, cm_end_pos, bp_pos, bp_end_pos, strand,
+                 cm_pos, cm_end_pos, bp_pos, bp_end_pos, genetic, strand,
                  has_multiple_pos, has_other_alignments, map_name, empty = False):
         
         self._marker_id = marker_id
@@ -44,12 +45,13 @@ class MappingResult(object):
         self._other_alignments = has_other_alignments
         self._map_name = map_name
         self._empty = empty
+        self._genetic = genetic
     
     # An empty MappingResult can be created for several reasons,
     # including creating an empty mapping result which has features associated
     @staticmethod
     def get_empty():
-        mapping_result = MappingResult("-", "-", "-", "-", "-", "-", "-", "-", False, False, "")
+        mapping_result = MappingResult("-", "-", "-", "-", "-", "-", "-", "-", "-", False, False, "")
         mapping_result.set_empty(True)
         return mapping_result
     
@@ -67,6 +69,7 @@ class MappingResult(object):
                                            self.get_cm_end_pos(),
                                            self.get_bp_pos(),
                                            self.get_bp_end_pos(),
+                                           self.get_genetic(),
                                            self.get_strand(),
                                            self.has_multiple_pos(),
                                            self.has_other_alignments(),
@@ -90,6 +93,7 @@ class MappingResult(object):
             cm_end_pos = -1.0
             bp_pos = mapping_data[2]
             bp_end_pos = mapping_data[3]
+            genetic = mapping_data[5]
             strand = mapping_data[4]
             pos_shift = 5
         else:
@@ -122,7 +126,7 @@ class MappingResult(object):
         empty = False # a mapping result with data is not empty by definition
         
         return MappingResult(marker_id, chrom_name, chrom_order,
-                             cm_pos, cm_end_pos, bp_pos, bp_end_pos, strand, 
+                             cm_pos, cm_end_pos, bp_pos, bp_end_pos, genetic, strand, 
                              has_multiple_pos, has_other_alignments, map_name, empty)
     
     # A feature is an attachment or additional information
@@ -158,6 +162,9 @@ class MappingResult(object):
     
     def get_bp_end_pos(self):
         return self._bp_end_pos
+
+    def get_genetic(self):
+        return self._genetic
     
     def get_strand(self):
         return self._strand
@@ -221,7 +228,7 @@ class MappingResult(object):
     
     def __str__(self):
         return " - ".join([self._marker_id, str(self._chrom_name)+"/"+str(self._chrom_order),
-                           str(self._cm_pos), str(self._cm_end_pos), str(self._bp_pos), str(self._bp_end_pos), str(self._strand),
+                           str(self._cm_pos), str(self._cm_end_pos), str(self._bp_pos), str(self._bp_end_pos), str(self._genetic), str(self._strand),
                            str(self._multiple_pos), str(self._other_alignments), str(self._map_name),
                            str(self._feature), str(self._empty)])
     
