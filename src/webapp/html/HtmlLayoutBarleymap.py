@@ -3,6 +3,7 @@
 
 # HtmlLayoutBarleymap.py is part of PrunusMap web app.
 # Copyright (C) 2017  Carlos P Cantalapiedra.
+# Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 # (terms of use can be found within the distributed LICENSE file).
 
 class HtmlLayoutBarleymap(object):
@@ -210,15 +211,19 @@ class HtmlLayoutBarleymap(object):
             <br/><br/>
             
             The <strong><i><a href="{2}/find/">Find markers</a></i></strong> option allows to find the position of markers by using their identifiers as input.
-            <br/>Note that those markers must be part of one of the
-            <!--<strong><a href="{0}#prunusmap_datasets">-->precalculated datasets<!--</a></strong>--> available (e.g.: Illumina 16K markers).
+            <br/>Note that those markers must be part of one of the available (e.g.: Illumina 16K markers).
             <br/><br/>
             
             To use the <strong><i><a href="{2}/align/">Align sequences</a></i></strong> option you must provide nucleotide sequences of the markers (in FASTA format).
             <br/>These will be used to retrieve their positions through
             sequence alignment to the selected map (ie Pp_NCBI_V2).
             <br/><br/>
-            
+           
+            To use the <strong><i><a href="{2}/prot/">Align proteins</a></i></strong> option you must provide amino acid sequences in FASTA format.
+            <br/>These will be used to retrieve their positions through protein-to-DNA
+            alignment to the selected map (ie Pp_NCBI_V2).
+            <br/><br/>
+
             The <strong><i><a href="{2}/locate/">Locate by position</a></i></strong> option allows to examine the map context of specific positions,
             which must be provided as tuples with chromosome (or contig) and position (local position, within the chromosome or contig, in base pairs).
             For example, an user could provide as input "Pp01   10000" to find out which genes are in that specific region of chromosome Pp01.
@@ -228,11 +233,13 @@ class HtmlLayoutBarleymap(object):
             information of genes, genetic markers, and anchored features,
             that enrich the context around or between the queries will be shown.<br/><br/>
             
-            <strong><a href="https://github.com/eead-csic-compbio/prunusmap_web">Prunusmap web</a></strong> 
-            works on top of <strong><a href="https://github.com/Cantalapiedra/barleymapcore">barleymap core API</a></strong>, used also in a
-            <strong><a href="https://github.com/Cantalapiedra/barleymap">standalone application</a></strong>
-            that allows loading custom databases, maps and datasets, among other features.
-            <br/>Such application can be used with data from any organism for which sequences anchored to a genetic/physical background are available.
+            The frontend
+            <a href="https://github.com/eead-csic-compbio/prunusmap_web">prunusmap_web</a> is a fork of 
+            <a href="https://github.com/Cantalapiedra/barleymap_web">barleymap_web</a> with 
+            added <strong>protein alignments</strong>.
+            The backend is the 
+            <strong><a href="https://github.com/Cantalapiedra/barleymap">standalone application</a></strong>,
+            which was added the <strong>bamp_align_prot</strong> tools.
             
             <br/><br/>
             
@@ -247,10 +254,14 @@ class HtmlLayoutBarleymap(object):
             <strong>Funding:</strong><br/>
             This work was funded by CSIC [grants 2020AEP119 & FAS2022_052], the Spanish Research Agency [grants AGL2017-83358-R MCIN/AEI/10.13039/501100011033 & "A way of making Europe"] and the Government of Arag&oacute;n [grants A44, A09_23R, A10_23R & PhD contract to Najla Ksouri 2018-2023], which were co-financed with FEDER funds.<br/><br/>
 
+
             <strong>Citations:</strong>
-            <a href="http://link.springer.com/article/10.1007%2Fs11032-015-0253-1">{1}</a>
+
+            <a href="https://doi.org/10.1101/2024.03.26.586732">{1}</a>
             <br/><br/>
+
             <hr/>
+
             <br/>
             
             <cite><sup>[1]</sup>International Peach Genome Initiative. 2013.
