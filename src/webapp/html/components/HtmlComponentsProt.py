@@ -13,7 +13,7 @@ class HtmlComponentsProt(object):
     ################################## ALIGN HTML COMPONENTS
     ########################################################
     @staticmethod
-    def prot(base_url, align_form, PREFIX_UI_CTRLS_ALIGN, maps_config):
+    def prot(base_url, align_form, PREFIX_UI_CTRLS_PROT, maps_config):
         output = []
         
         ####### INPUT QUERY TEXT AREA
@@ -25,14 +25,14 @@ class HtmlComponentsProt(object):
         output.append(HtmlComponentsBase._load_query_area_align(align_form.get_query(),
                                                 align_form.get_user_file(),
                                               "Input FASTA protein sequences (1-word header):",
-                                              PREFIX_UI_CTRLS_ALIGN))
+                                              PREFIX_UI_CTRLS_PROT))
         output.append("<br/>")
         output.append("<table><tr><td>")
         output.append(HtmlComponentsBase._load_output_area(align_form.get_multiple(),
                                          align_form.get_sort(),
                                          align_form.get_send_email(),
                                          align_form.get_email_to(),
-                                         PREFIX_UI_CTRLS_ALIGN))
+                                         PREFIX_UI_CTRLS_PROT))
         output.append("</td><td>")
         output.append(HtmlComponentsBase._load_genes_area(align_form.get_show_markers(),
                                         align_form.get_show_genes(),
@@ -42,7 +42,7 @@ class HtmlComponentsProt(object):
                                         align_form.get_extend(),
                                         align_form.get_extend_cm(),
                                         align_form.get_extend_bp(),
-                                        PREFIX_UI_CTRLS_ALIGN))
+                                        PREFIX_UI_CTRLS_PROT))
         
         output.append("</td></tr></table>")
         output.append("<br/>")
@@ -73,7 +73,7 @@ class HtmlComponentsProt(object):
                 </tr></table>
             </form>
         </section><hr/> <!-- content -->
-        """.format(base_url+"/img/ui_buttons_align.png", "align"))
+        """.format(base_url+"/img/ui_buttons_prot.png", "align"))
         
         output.append("""
         <script>
@@ -85,7 +85,7 @@ class HtmlComponentsProt(object):
                 element.setAttribute('src', '{1}');
             }}
         </script>
-        """.format("align", base_url+"/img/ui_buttons_align_mini.png", base_url+"/img/ui_buttons_align_mini_hover.png"))
+        """.format("align", base_url+"/img/ui_buttons_prot_mini.png", base_url+"/img/ui_buttons_prot_mini_hover.png"))
         
         return "".join(output)
     

@@ -36,7 +36,7 @@ class HtmlLayoutBarleymap(object):
         return "".join(output)
     
     @staticmethod
-    def main_text(citation, base_url, PREFIX_UI_CTRLS_ALIGN, PREFIX_UI_CTRLS_FIND, PREFIX_UI_CTRLS_LOCATE):
+    def main_text(citation, base_url, PREFIX_UI_CTRLS_ALIGN, PREFIX_UI_CTRLS_PROT, PREFIX_UI_CTRLS_FIND, PREFIX_UI_CTRLS_LOCATE):
         output = []
         #output.append('<br/>')
         output.append('<div id="main_buttons" style="margin:0px;">')
@@ -50,6 +50,13 @@ class HtmlLayoutBarleymap(object):
         output.append(HtmlLayoutBarleymap.output_html_img_button(PREFIX_UI_CTRLS_ALIGN, base_url+"/"+PREFIX_UI_CTRLS_ALIGN+"/",
                                                                  base_url+"/img/ui_buttons_align.png", "200px", "100px",
                                                                  base_url+"/img/ui_buttons_align_hover.png"))
+
+        output.append("</td>")
+        output.append('<td style="text-align:center;">')
+        output.append(HtmlLayoutBarleymap.output_html_img_button(PREFIX_UI_CTRLS_PROT, base_url+"/"+PREFIX_UI_CTRLS_PROT+"/",
+                                                                 base_url+"/img/ui_buttons_prot.png", "200px", "100px",
+                                                                 base_url+"/img/ui_buttons_prot_hover.png")) 
+
         output.append("</td>")
         output.append('<td style="text-align:center;">')
         output.append(HtmlLayoutBarleymap.output_html_img_button(PREFIX_UI_CTRLS_LOCATE, base_url+"/"+PREFIX_UI_CTRLS_LOCATE+"/",

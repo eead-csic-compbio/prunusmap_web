@@ -23,8 +23,8 @@ class HtmlComponents(object):
         return HtmlComponentsAlign.align(base_url, align_form, PREFIX_UI_CTRLS_ALIGN, maps_config)
 
     @staticmethod
-    def prot(base_url, align_form, PREFIX_UI_CTRLS_ALIGN, maps_config):
-        return HtmlComponentsProt.prot(base_url, align_form, PREFIX_UI_CTRLS_ALIGN, maps_config)
+    def prot(base_url, align_form, PREFIX_UI_CTRLS_PROT, maps_config):
+        return HtmlComponentsProt.prot(base_url, align_form, PREFIX_UI_CTRLS_PROT, maps_config)
     
     @staticmethod
     def find(base_url, find_form, PREFIX_UI_CTRLS_FIND, maps_config):
