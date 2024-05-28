@@ -3,6 +3,7 @@
 
 # HtmlComponentsHelp.py is part of Barleymap web app.
 # Copyright (C) 2017 Carlos P Cantalapiedra.
+# Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 # (terms of use can be found within the distributed LICENSE file).
 
 class HtmlComponentsHelp(object):
@@ -34,7 +35,7 @@ class HtmlComponentsHelp(object):
                             
                         <li><a href="#align_sequences">
                         
-                            Align sequences
+                            Align sequences and proteins
                             
                         </a></li>
                             <ul>
@@ -102,13 +103,15 @@ class HtmlComponentsHelp(object):
                         <br/>
 
                         Prunusmap was designed to search the genetic and physical positions of <em>Prunus</em> genetic markers
-                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) and <i>Prunus dulcis</i> (NCBI and GDR) <sup>[3,15,16]</sup>).
+                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) 
+                        and <i>Prunus dulcis</i> (NCBI and GDR) <sup>[3,15,16]</sup>).
                         The current version uses the <strong>Pp_NCBI_V2</strong> map<sup>[5]</sup> by default.
                         <br/><br/>
                         Prunusmap provides <strong>three tools</strong> to retrieve data from the maps:
                         <ul class="help_list">
                             <li>"Find markers": to retrieve the position of markers providing their identifiers.</li>
                             <li>"Align sequences": to obtain the position of FASTA sequences by pairwise alignment.</li>
+                            <li>"Align proteins": to obtain the position of FASTA amino acid sequences by pairwise alignment.</li>
                             <li>"Locate by position": to examine specific loci by map position.</li>
                         </ul>
                         <br/>
@@ -182,7 +185,7 @@ class HtmlComponentsHelp(object):
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                         <br/>
                         
-                        The next is a list of datasets whose map positions have been pre-computed and stored in this instance of the Barleymap web application.
+                        The next is a list of datasets whose map positions have been pre-computed and stored in this instance of the web application.
                         Note that the
                         <a href="https://github.com/Cantalapiedra/barleymap">standalone version</a> or a custom
                         <a href="https://github.com/eead-csic-compbio/prunusmap_web">web version</a> of Prunusmap could be used to create other datasets.
@@ -250,17 +253,17 @@ class HtmlComponentsHelp(object):
                     <hr/>
                     <br/>
                     <a class="top_link"  href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
-                    <h2 id="align_sequences">Align sequences</h2>
+                    <h2 id="align_sequences">Align sequences and proteins</h2>
                         
                         <br/>
                         
-                        The "Align sequences" tool allows searching the map position of <strong>FASTA formatted sequences</strong> through alignment.
-                        This process is slower than "Find markers", but allows adjusting the alignment parameters as needed and searching
-                        for any DNA sequences.
+                        The "Align sequences" tool allows searching the map position of <strong>FASTA nucleotide sequences</strong> through alignment.
+                        The "Align proteins" tools does a similar job using <strong>FASTA amino acids sequences</strong> as input.
+                        This process is slower than "Find markers", but allows adjusting the alignment parameters as needed.
                         
                         <br/><br/>
                         
-                        Some of the features of "Align sequences" are:
+                        Some of the features of "Align sequences" and "Align proteins" are:
                         
                         <ul class="help_list">
                             <li>
@@ -283,7 +286,7 @@ class HtmlComponentsHelp(object):
                         as references for performing the alignments.
                         
                         <br/><br/>
-                        
+
                         In "Align sequences" the user can choose different options for the <strong>alignment algorithm</strong>,
                         under the option "Choose an action".
                         
@@ -303,20 +306,25 @@ class HtmlComponentsHelp(object):
                             </li>
                         </ul>
                         
+                        <br/><br/>
+                        
+                        Prunusmap is able to use all 3 algorithms when searching maps which have more than one
+                        database associated to it. The details of how these algorithms work can be found
+                        <a href="https://github.com/Cantalapiedra/barleymap#4111-alignment-algorithm">here</a>.
+
+                        <br/><br/>
+
+                        Instead, "Align proteins" currently relies on MINIPROT<sup>[14]</sup>, an <strong>alignment algorithm</strong>
+                        that aligns protein sequences to genomes considering splicing and frameshifts.
+
+                        <br/><br/>
+
                         Note that the user can choose also the parameters which define minimum thresholds for results of alignment to be reported.
                         The <strong>minimum identity</strong> of alignment can be set with the "min. id." parameter,
                         whereas the <strong>minimum query coverage</strong> in the alignment
                         can be set with the "min. query cov." parameter.
-                        Any alignment result with one of those parameters smaller than the thresholds will be discarded by barleymap and thus not reported in
+                        Any alignment result with one of those parameters smaller than the thresholds will be discarded and thus not reported in
                         the output tables.
-                        
-                        <br/><br/>
-                        
-                        Besides that, Prunusmap is able to use 3 different algorithms when searching maps which have more than one
-                        database associated to it. The details of how these algorithms work can be found
-                        <a href="https://github.com/Cantalapiedra/barleymap#4111-alignment-algorithm">here</a>.
-                        Here, just a brief description of the maps and databases included,
-                        and the algorithms, is provided.
                         
                         <br/><br/>
                         
@@ -381,7 +389,7 @@ i
                         <br/>
                         <center><img width="499" height="526" style="border:none;" src="{0}"/></center>
                         <br/>
-                        """.format(base_url+"/img/barleymap_popseq.pipeline_2.png"))
+                        """.format(base_url+"/img/prunusflow.png"))
         
         
         ## LOCATE BY POSITION
@@ -458,7 +466,7 @@ i
                         
                             <br/>
                             
-                            The first result shown by Prunusmap is a <strong>graphical representation</strong> of the chromosomes.
+                            The first result returned by Prunusmap is a <strong>graphical representation</strong> of the chromosomes.
                             Queries with map position are shown on top of those chromosomes.
                             Using the magnifying glass button, the user can toggle between complete chromosomes or just the mapped region.
                             
@@ -543,12 +551,12 @@ i
                     <h2 id="confidentiality">Confidentiality</h2>
                     
                         <br/>
-			While Barleymap uses HTTPS by default, we can not guarantee the security of the data used with the web tool.
+			While Barleymap uses HTTPS by default, we cannot guarantee the security of the data used with the web tool.
                         <br/><br/>
                         Should this naïve confidentiality be not acceptable to some users, we would recommend installing the
                         <a href="https://github.com/Cantalapiedra/barleymap">standalone barleymap</a> version,
                         or setting up their own instace of
-                        <a href="https://github.com/Cantalapiedra/barleymap_web">barleymap web</a> version. 
+                        <a href="https://github.com/eead-csic-compbio/prunusmap_web">prunusmap_web</a> version. 
                         <br/><br/>
             """.format(base_url))
         
@@ -619,6 +627,10 @@ i
                     <br/>
                     <cite><sup>[13]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
                                             target="_blank">Altschul et al. 1990</a></cite>
+                    <br/>
+
+                    <cite><sup>[14]</sup><a href="https://doi.org/10.1093/bioinformatics/btad014"
+                                            target="_blank">Li. 2023</a></cite>
                     <br/>
 
                     <cite><sup>[15]</sup><a href="https://doi.org/10.1093/g3journal/jkac097"
