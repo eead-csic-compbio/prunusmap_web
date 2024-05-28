@@ -32,9 +32,10 @@ Note that a map can store positions of sequences from one or more databases.
 - Datasets: tables which store the map position of loci often used as queries (markers, genes, etc.)
 to a specific map, so that it can be queried without repeating the alignment step.
 
-PrunusMap has 3 different groups of **tools**, which are further explained in following sections:
+PrunusMap has 4 different groups of **tools**, which are further explained in following sections:
 - Main tools:
   - bmap_align ("Align sequences" in the web version).
+  - bmap_align_prot ("Align proteins" in the web version)
   - bmap_find ("Find markers" in the web version).
   - bmap_locate ("Locate by position" in the web version).
 - Secondary tools (only in the standalone version):
