@@ -102,12 +102,54 @@ class HtmlComponentsHelp(object):
                     
                         <br/>
 
-                        Prunusmap was designed to search the genetic and physical positions of <em>Prunus</em> genetic markers
-                        on physical and genetic maps of <i>Prunus persica</i> (NCBI and <a href="https://phytozome-next-jgi.doe.gov">Phytozome</a> <sup>[1,2]</sup>) 
-                        and <i>Prunus dulcis</i> (NCBI and GDR) <sup>[3,15,16]</sup>).
-                        The current version uses the <strong>Pp_NCBI_V2</strong> map<sup>[5]</sup> by default.
+                        Prunusmap was designed to facilitate the search for genetic and physical positions of <em>Prunus</em> markers across various <strong>species and cultivars</strong> within the <em>Prunus</em> genus.
+                        Currently, it supports the following species:
+                        <ol><strong>
+                            <li> Prunus persica (peach) <sup> [1, 2, 3, 4, 5] </sup> </li>
+                            <li> Prunus dulcis (almond) <sup> [6, 7, 8] </sup> </li>
+                            <li> Prunus avium (sweet cherry) <sup> [9, 10] </sup> </li>
+                            <li> Prunus armeniaca (apricot) <sup> [11] </sup> </li>
+                            <li> Prunus mume (Japanese apricot) <sup> [12] </sup> </li> 
+                        </ol></strong>
+
+                        Each species has its own naming convention to help differentiate them. 
+                        Here is a summary of the naming conventions for the maps associated with each species:
+                        <ol>
+                            <li><strong><em>Prunus persica</em></strong></li>
+                                <ul>
+                                <li>Maps are named using the format <strong><span style="color: red;">Pp_Cultivar_GenomeSource_Version</span></strong></li>
+                                <li> Example: Pp_Lovell_NCBI_V2</li>
+                                </ul>
+
+                            <li><strong><em>Prunus dulcis</em></strong></li>
+                                <ul>
+                                <li>Maps are starting with <strong><span style="color: red;">Pd</span></strong></li>
+                                <li> Example: Pd_Lauranne_GDR_V1</li>
+                                </ul>
+
+                            <li><strong><em>Prunus avium</em></strong></li>
+                                <ul>
+                                <li>Maps are starting with <strong><span style="color: red;">Pav</span></strong></li>
+                                <li> Example: Pav_Tieton_GDR_V2</li>
+                                </ul>
+
+                            <li><strong><em>Prunus armeniaca</em></strong></li>
+                                <ul>
+                                <li>Maps are starting with <strong><span style="color: red;">Pa</span></strong></li>
+                                <li> Example: Pa_RojPas_NCBI_V1</li>
+                                </ul>
+
+                            <li><strong><em>Prunus mume</em></strong></li>
+                                <ul>
+                                <li>Maps are starting with <strong><span style="color: red;">Pm</span></strong></li>
+                                <li> Example: Pm_Tortuosa_GDR_V1</li>
+                                </ul>
+                         </ol>   
+
+                        The defaut map is  <strong>Pp_Lovell_NCBI_V2</strong> map<sup>[2]</sup>:
                         <br/><br/>
-                        Prunusmap provides <strong>three tools</strong> to retrieve data from the maps:
+
+                       Prunusmap provides <strong>four tools</strong> to retrieve data from the maps:
                         <ul class="help_list">
                             <li>"Find markers": to retrieve the position of markers providing their identifiers.</li>
                             <li>"Align sequences": to obtain the position of FASTA sequences by pairwise alignment.</li>
@@ -193,27 +235,27 @@ class HtmlComponentsHelp(object):
                         <ul class="help_list">
                         
                             <li>
-                                <b> IRSC 9K markers</b> <i>Prunus persica</i> dataset<sup>[4,8]</sup>: identifiers look like SNP_IGA_134631, snp_scaffold_1_46157131, snp_1_46757382, Pp8Cl or RosCOS1338-411. 
+                                <b> IRSC 9K markers</b> <i>Prunus persica</i> dataset<sup>[13,14]</sup>: identifiers look like SNP_IGA_134631, snp_scaffold_1_46157131, snp_1_46757382, Pp8Cl or RosCOS1338-411. 
                                 <br/>
                                 A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
                             </li>
                            
                             <li>
-                                <b>IRSC 16K markers</b> <i>Prunus persica</i> dataset<sup>[5,8]</sup>: identifiers look like SNP_IGA_679 or Peach_AO_0000136. 
+                                <b>IRSC 16K markers</b> <i>Prunus persica</i> dataset<sup>[14,15]</sup>: identifiers look like SNP_IGA_679 or Peach_AO_0000136. 
                                 <br/>
                                 A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
                             </li>
 
                             <li>
-                                <b>AdafuelxFlordaguard</b> peach rootstock markers<sup>[6]</sup> with physical and genetic positions: identifiers look like Pp01_60632_SC_0.
+                                <b>AdafuelxFlordaguard</b> peach rootstock markers<sup>[16]</sup> with physical and genetic positions: identifiers look like Pp01_60632_SC_0.
                             </li>
                             
                             <li>
-                                <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[7]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
+                                <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[17]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
                             </li>
                             
                             <li>
-                                <b>UniProt proteins</b> of <i>Prunus persica</i> dataset <sup>[9]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.
+                                <b>UniProt proteins</b> of <i>Prunus persica</i> dataset <sup>[18]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.
                             </li>
                             
                             <li>
@@ -221,15 +263,15 @@ class HtmlComponentsHelp(object):
                             </li>
                             
                             <li>
-                                <b>JGI gene models</b> of <i>Prunus persica</i> <sup>[10]</sup>: identifiers look like ppa000003m.g and Prupe.1G000100 for respectively v1 and v2.
+                                <b>JGI gene models</b> of <i>Prunus persica</i> <sup>[19]</sup>: identifiers look like ppa000003m.g and Prupe.1G000100 for respectively v1 and v2.
                             </li>
 
                             <li>
-                                <b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[11]</sup>: identifiers look like PRUPE_ppa017353mg and LOC18793189 for respectively v1 and v2.
+                                <b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[20]</sup>: identifiers look like PRUPE_ppa017353mg and LOC18793189 for respectively v1 and v2.
                             </li>
 
                             <li>
-                                <b>NCBI gene models</b> of <i>Prunus dulcis</i> <sup>[11]</sup>: identifiers look like LOC117629531.
+                                <b>NCBI gene models</b> of <i>Prunus dulcis</i> <sup>[20]</sup>: identifiers look like LOC117629531.
                             </li>
 
                             <li>
@@ -332,7 +374,142 @@ class HtmlComponentsHelp(object):
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                        
 PrunusMap was designed to search the position of Prunus genetic markers on the Prunus persica cv. Lovell Physical Maps (NCBI and Phytozome [1,2]) and the Prunus dulcis cv. Texas, Lauranne and Non_pareil Physical Maps (NCBI [3], GDR [15] and [16]).
-i
+                       
+                       <br/><br/>
+
+                        <table class="table">
+                            <tr>
+                                <th> Maps </th>
+                                <th> Cultivars </th>
+                                <th> Assemblies </th>
+                                <th> Chromosomes Number; ID </th>
+                                <th> Scaffolds Number; ID </th>
+                                <th> References </th>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_NCBI_V1 </td>
+                                <td> Lovell </td>
+                                <td> GCF_000346465.1 </td>
+                                <td> --  </td>
+                                <td><strong> 202</strong>; NW_006760184.1--NW_006760385.1 </td>
+                                <td> [1] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_NCBI_V2 </td>
+                                <td> Lovell  </td>
+                                <td> GCF_000346465.2 </td>
+                                <td><strong> 8</strong>; NC_034009.1--NC_034016.1 </td>
+                                <td><strong> 183 </strong>; NW_018027148.1--NW_018027330.1 </td>
+                                <td> [2] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_JGI_V1 </td>
+                                <td> Lovell  </td>
+                                <td> GCF_000346465.1 </td>
+                                <td> -- </td>
+                                <td><strong>202</strong>; scaffold_1,... </td>
+                                <td> [1] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_JGI_V2 </td>
+                                <td> Lovell  </td>
+                                <td> GCF_000346465.2 </td>
+                                <td><strong>8</strong>; Pp01--Pp08 </td>
+                                <td><strong>183</strong>; scaffold_101,... </td>
+                                <td> [2] </td>
+                            </tr>
+                            <tr> 
+                                <td> Pp_ChineseCling_GDR_V1 </td>
+                                <td> Chinese Cling  </td>
+                                <td> -- </td>
+                                <td><strong>8</strong>; Chr1--Chr8 </td>
+                                <td><strong>127</strong>; contig1,... </td>
+                                <td> [3] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Zhongyoutao14_GDR_V1 </td>
+                                <td> Zhongyoutao14  </td>
+                                <td> -- </td>
+                                <td><strong>8</strong>; G1--G8 </td>
+                                <td> 0 </td>
+                                <td> [4] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_124Pan_GDR_V1 </td>
+                                <td> 124Pan (flat peach)  </td>
+                                <td> CNA0019231 </td>
+                                <td><strong>8</strong>;Pp01_RaG00--Pp01_RaG00 </td>
+                                <td><strong>6</strong>; scaffold_12_RaG00,.. </td>
+                                <td> [5] </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_NCBI_V2 </td>
+                                <td> Texas  </td>
+                                <td> GCA_902201215.1 </td>
+                                <td><strong>8</strong>; NC_047650.1--NC_047657.1 </td>
+                                <td><strong>683</strong>; NW_023010004.1--NW_023010686.1 </td>
+                                <td> [6] </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_GDR_V2 </td>
+                                <td> Texas  </td>
+                                <td> GCA_902201215.1 </td>
+                                <td><strong>8</strong>; Pd01--Pd08 </td>
+                                <td><strong>683</strong>; pdulcis26_s0345,... </td>
+                                <td> [6] </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Lauranne_GDR_V1 </td>
+                                <td> Lauranne  </td>
+                                <td> AP019297-AP019304 </td>
+                                <td><strong>8</strong>; Pd01-Pd08 </td>
+                                <td> 0 </td>
+                                <td> [7] </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Nonpareil_V1 </td>
+                                <td> Nonpareil  </td>
+                                <td> GCA_021292205 </td>
+                                <td><strong>8</strong>; CM037988.1--cm037995.1 </td>
+                                <td><strong>95</strong>; AJFAZ020000011.1--AJFAZ020000105.1 </td>
+                                <td> [8] </td>
+                            </tr>
+                               
+                             <tr>
+                                <td> Pa_RojPas_NCBI_V1 </td>
+                                <td> Rojo Pasion (apricot without seed) </td>
+                                <td> GCA_903112645.1 </td>
+                                <td> -- </td>
+                                <td><strong>93</strong>; CAEKDK010000001.1--CAEKDK010000093.1 </td>
+                                <td> [11] </td>
+                            </tr>
+                            <tr>
+                                <td>Pav_Satonishiki_NCBI_V1 </td>
+                                <td> Satonishiki  </td>
+                                <td> GCA_002207925.1 </td>
+                                <td> -- </td>
+                                <td><strong>10,148</strong>; NW_01892124.1,... </td>
+                                <td> [9] </td>
+                            </tr>
+                            <tr>
+                                <td> Pav_Tieton_GDR_V1 </td>
+                                <td> Tieton </td>
+                                <td> -- </td>
+                                <td><strong>8</strong>; Chr_1--Chr8 </td>
+                                <td><strong>53</strong>; contig_9--contig_61 </td>
+                                <td> [10] </td>
+                            </tr>
+                            <tr>
+                                <td> Pm_Tortuosa_GDR_V1 </td>
+                                <td> Tortuosa  </td>
+                                <td> -- </td>
+                                <td><strong>8</strong>; Chr1--Chr8 </td>
+                                <td><strong>32</strong>; scaffold9--scaffold32 </td>
+                                <td> [12] </td>
+                            </tr>
+                            
+                             
+                        </table>
 
 
                         <ul class="help_list">
@@ -595,51 +772,59 @@ i
                     <cite><sup>[2]</sup><a href="https://doi.org/10.1186%2Fs12864-017-3606-9" target="_blank">Verde et al. 2017</a>
                     </cite><br/>
             
-                    <cite><sup>[3]</sup><a href="https://doi.org/10.1111/tpj.14538" target="_blank">Alioto et al. 2020</a>
+                    <cite><sup>[3]</sup><a href="https://doi.org/10.1111/tpj.15439" target="_blank">Cao et al. 2021 </a>
                     </cite><br/>
-           
-                    <cite><sup>[4]</sup><a href="https://doi.org/10.1371%2Fjournal.pone.0035668" target="_blank">Verde et al. 2012</a> IRSC 9K markers downloaded from the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
+
+                    <cite><sup>[4]</sup><a href="https://doi.org/10.1111/pbi.13767" target="_blank">Lian et al. 2021 </a>
+                    </cite><br/>
+                    
+                    <cite><sup>[5]</sup><a href="https://doi.org/10.3390/plants10030538" target="_blank">Zhang et al. 2021 </a>
+                    </cite><br/>
+                    
+                    <cite><sup>[6]</sup><a href="https://doi.org/10.1111/tpj.14538" target="_blank">Alioto et al. 2020</a>
+                    </cite><br/>
+
+                    <cite><sup>[7]</sup><a href="https://doi.org/10.1126/science.aav8197" target="_blank">Sánchez-erez et al. 2019</a>
+                    </cite><br/>
+
+                    <cite><sup>[8]</sup><a href="https://doi.org/10.1093/g3journal/jkac065" target="_blank">D'Amico-Willman et al. 2022</a>
+                    </cite><br/>
+                 
+                    <cite><sup>[9]</sup><a href="https://doi.org/10.1093/dnares/dsx020" target="_blank">Shirasawa et al. 2017</a>
+                    </cite><br/>
+                    
+                    <cite><sup>[10]</sup><a href="https://doi.org/10.1038/s41438-020-00343-8" target="_blank">Wang et al. 2020</a>
+                    </cite><br/>
+
+                    <cite><sup>[11]</sup><a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJEB37669/" target="_blank">Max Planck Institute Plant Breeding</a>
+                    </cite><br/>
+
+                    <cite><sup>[12]</sup><a href="https://doi.org/10.1111/nph.17894" target="_blank">Zheng et al. 2021</a>
+                    </cite><br/>
+                    
+                    <cite><sup>[13]</sup><a href="https://doi.org/10.1371/journal.pone.0035668" target="_blank">Verde et al. 2012</a> IRSC 9K markers downloaded from the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
+                   </cite><br/>
+                    
+                    <cite><sup>[14]</sup><a href="https://doi.org/10.1093/nar/gky1000" target="_blank">Jung et al. 2019</a>
+                    </cite><br/>
+
+                    <cite><sup>[15]</sup>Gasic et al. 2022. Unpublished. IRSC 16K markers downloaded from the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
                     </cite></br>
-            
-                    <cite><sup>[5]</sup>Gasic et al. 2022. Unpublished. IRSC 16K markers downloaded from the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
-                    </cite></br>
 
-                    <cite><sup>[6]</sup><a href="https://doi.org/10.3389/fpls.2022.872208" target="_blank">Guajardo et al. 2022</a>
+                    <cite><sup>[16]</sup><a href="https://doi.org/10.3389/fpls.2022.872208" target="_blank">Guajardo et al. 2022</a>
                     </cite><br>
 
-                    <cite><sup>[7]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
+                    <cite><sup>[17]</sup><a href="https://doi.org/10.3390/plants12020242" target="_blank">Duval et al. 2023</a>
                     </cite><br>
 
-                    <cite><sup>[8]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgky1000" target="_blank">Jung et al. 2019</a>
+                    <cite><sup>[18]</sup><a href="https://doi.org/10.1093/nar/gkac1052" target="_blank">The UniProt Consortium. 2023</a>
                     </cite><br>
 
-                    <cite><sup>[9]</sup><a href="https://doi.org/10.1093/nar/gkac1052" target="_blank">The UniProt Consortium. 2023</a>
+                    <cite><sup>[19]</sup><a href="https://doi.org/10.1093/nar/gkr944" target="_blank">Goodstein et al. 2012</a>
                     </cite><br>
 
-                    <cite><sup>[10]</sup><a href="https://doi.org/10.1093/nar/gkr944" target="_blank">Goodstein et al. 2012</a>
+                    <cite><sup>[20]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgkab1112" target="_blank">Sayers et al. 2021</a>
                     </cite><br>
-
-                    <cite><sup>[11]</sup><a href="https://doi.org/10.1093%2Fnar%2Fgkab1112" target="_blank">Sayers et al. 2021</a>
-                    </cite><br>
-
-                    <cite><sup>[12]</sup><a href="https://doi.org/10.1093/bioinformatics/bti310"
-                                            target="_blank">Wu and Watanabe 2005</a></cite>
-                    <br/>
-                    <cite><sup>[13]</sup><a href="https://doi.org/10.1016/S0022-2836(05)80360-2"
-                                            target="_blank">Altschul et al. 1990</a></cite>
-                    <br/>
-
-                    <cite><sup>[14]</sup><a href="https://doi.org/10.1093/bioinformatics/btad014"
-                                            target="_blank">Li. 2023</a></cite>
-                    <br/>
-
-                    <cite><sup>[15]</sup><a href="https://doi.org/10.1093/g3journal/jkac097"
-                                            target="_blank">D'Amico-Willman et al. 2022</a></cite>
-                    <br/>
-
-                    <cite><sup>[16]</sup><a href="https://doi.org/10.1126/science.aav8197"
-                                            target="_blank">Sanchez-Perez et al. 2019</a></cite>
-                    <br/>
 
                 </section>
                 <br/>
