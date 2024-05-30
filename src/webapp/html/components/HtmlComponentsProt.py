@@ -22,7 +22,7 @@ class HtmlComponentsProt(object):
             <form name="input_align" action="{0}" method="post" enctype="multipart/form-data">
             """.format(base_url+"/mapmarkers/prot"))
         
-        output.append(HtmlComponentsBase._load_query_area_align(align_form.get_query(),
+        output.append(HtmlComponentsBase._load_query_area_prot(align_form.get_query(),
                                                 align_form.get_user_file(),
                                               "Input FASTA protein sequences (1-word header):",
                                               PREFIX_UI_CTRLS_PROT))
