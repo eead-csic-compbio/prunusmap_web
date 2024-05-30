@@ -3,6 +3,7 @@
 
 # OutputMaps.py is part of Barleymap web app.
 # Copyright (C) 2017  Carlos P Cantalapiedra.
+# Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 # (terms of use can be found within the distributed LICENSE file).
 
 import sys
@@ -99,7 +100,7 @@ class OutputMaps(object):
         
         
         html_writer.output_text("<strong>please cite</strong> "+
-                                "<a href='http://link.springer.com/article/10.1007%2Fs11032-015-0253-1' target='_blank' style='text-decoration:none;font-size:small;'>"+
+                                "<a href='https://doi.org/10.1101/2024.03.26.586732' target='_blank' style='text-decoration:none;font-size:small;'>"+
                                 paths_config.get_citation().replace("_", " ")+
                                 "</a>"+
                                 "<br/><br/>")
