@@ -440,4 +440,35 @@ input.demobutton{
     line-height:140%;
 }
 
+
+.table {
+	width:100%;
+	border-collapse: collapse;
+}	
+
+
+.table td {
+	border: 1px solid #000;
+	padding: 8px;
+	text-align: center;
+}
+
+.table th {
+	border: 1px solid #000;
+	padding: 10px;
+	text-align: center;
+	background-color: #D8D8D8;
+	color: black;
+}
+
+.table tr:hover {background: #AFE1AF;}
+
+
+
+
+
+
+
+
+
 /* END */
