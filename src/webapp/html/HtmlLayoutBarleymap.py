@@ -177,6 +177,8 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>23-05-2024:<br/>
+            . added "Align proteins" tool</br>            
             <br/>20-05-2024:<br/>
             . added new map for Prunus persica cv "ChineseCling" from GDR </br>
             . added new map for Prunus persica cv "Zhongyoutao14" from GDR </br>
@@ -186,7 +188,7 @@ class HtmlLayoutBarleymap(object):
             . posted bioRxiv preprint <a href="https://doi.org/10.1101/2024.03.26.586732">https://doi.org/10.1101/2024.03.26.586732</a><br/>
             <br/>01-12-2023:<br/>
             . added Prunus dulcis cv.Texas_NCBIv2 Uniprot Proteins</br>
-            . added Adafuel markers</br:>
+            . added Adafuel markers</br>
             <br/>01-10-2023:<br/>
             . added SNP markers from peach 16k array and 60k Axiom SNP: markers</br> 
             . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2</br>
