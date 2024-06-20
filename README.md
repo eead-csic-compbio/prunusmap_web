@@ -79,10 +79,10 @@ For example:
 ```
 mkdir /home/$USER/apps;
 cd /home/$USER/apps;
-curl -O https://github.com/Cantalapiedra/barleymap/archive/barleymap-3.2.tar.gz
-tar -zxf barleymap-3.2.tar.gz
-rm barleymap-3.2.tar.gz
-mv barleymap-3.2 barleymap
+curl -O https://github.com/Cantalapiedra/barleymap/archive/barleymap-4.0.tar.gz
+tar -zxf barleymap-4.0.tar.gz
+rm barleymap-4.0.tar.gz
+mv barleymap-4.0 barleymap
 export PATH=$PATH:/home/$USER/apps/barleymap/bin/
 export PYTHONPATH=$PYTHONPATH:/home/$USER/apps/barleymap/
 ```
