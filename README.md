@@ -1,14 +1,16 @@
 
 ## Contents
 
- - 1: [PrunusMap overview](https://github.com/Cantalapiedra/barleymap#1-barleymap-overview)
- - 2: [Prerequisites](https://github.com/Cantalapiedra/barleymap#2-prerequisites)
- - 3: [Installation and configuration](https://github.com/Cantalapiedra/barleymap#3-installation-and-configuration)
- - 4: [Tools and algorithms](https://github.com/Cantalapiedra/barleymap#4-tools-and-algorithms)
+ - 1: [PrunusMap overview](https://github.com/eead-csic-compbio/prunusmap_web#1-prunusmap-overview)
+ - 2: [Prerequisites](https://github.com/eead-csic-compbio/prunusmap_web#2-prerequisites)
+ - 3: [Installation and configuration](https://github.com/eead-csic-compbio/prunusmap_web#3-installation-and-configuration)
+ - 4: [Tools and algorithms](https://github.com/eead-csic-compbio/prunusmap_web#4-tools-and-algorithms)
+ - 5: [Citation](https://github.com/eead-csic-compbio/prunusmap_web#5-citation)
  
 ## 1) PrunusMap overview
 
-**PrunusMap** is a derivative of Barleymap and it was created as a fork of the original resource (Cantalapiedra et al., 2015). It's a toolkit designed to provide the map positions for user-defined queries in genetic/physical maps.
+**PrunusMap** is an evolution of Barleymap and it was created as a fork of the original resource (Cantalapiedra et al., 2015). 
+It is a toolkit designed to provide the map positions for user-defined queries in genetic/physical maps.
 
 PrunusMap was designed with **3 main goals** in mind:
 - Provide the position of sequences in a map, hiding from the user the details of the alignment and mapping steps.
@@ -77,10 +79,10 @@ For example:
 ```
 mkdir /home/$USER/apps;
 cd /home/$USER/apps;
-curl -O https://github.com/Cantalapiedra/barleymap/archive/barleymap-3.0.tar.gz
-tar -zxf barleymap-3.0.tar.gz
-rm barleymap-3.0.tar.gz
-mv barleymap-3.0 barleymap
+curl -O https://github.com/Cantalapiedra/barleymap/archive/barleymap-3.2.tar.gz
+tar -zxf barleymap-3.2.tar.gz
+rm barleymap-3.2.tar.gz
+mv barleymap-3.2 barleymap
 export PATH=$PATH:/home/$USER/apps/barleymap/bin/
 export PYTHONPATH=$PYTHONPATH:/home/$USER/apps/barleymap/
 ```
@@ -110,11 +112,11 @@ to configure the *src/bmap.conf* and *src/server.conf* files.
 
 ### 3.2) Configuration
 
-- 3.2.1: [Global configuration: the *paths.conf* file](https://github.com/Cantalapiedra/barleymap#321-global-configuration-the-pathsconf-file)
-- 3.2.2: [Databases: the *databases.conf* file](https://github.com/Cantalapiedra/barleymap#322-databases-the-databasesconf-file)
-- 3.2.3: [Maps: the *maps.conf* file](https://github.com/Cantalapiedra/barleymap#323-maps-the-mapsconf-file)
-- 3.2.4: [Datasets: the *datasets.conf* file](https://github.com/Cantalapiedra/barleymap#324-datasets-the-datasetsconf-file)
-- 3.2.5: [Annotations: the *datasets_annotation.conf* file](https://github.com/Cantalapiedra/barleymap#325-annotations-the-datasets_annotationconf-file)
+- 3.2.1: [Global configuration: the *paths.conf* file](https://github.com/eead-csic-compbio/prunusmap_web#321-global-configuration-the-pathsconf-file)
+- 3.2.2: [Databases: the *databases.conf* file](https://github.com/eead-csic-compbio/prunusmap_web#322-databases-the-databasesconf-file)
+- 3.2.3: [Maps: the *maps.conf* file](https://github.com/eead-csic-compbio/prunusmap_web#323-maps-the-mapsconf-file)
+- 3.2.4: [Datasets: the *datasets.conf* file](https://github.com/eead-csic-compbio/prunusmap_web#324-datasets-the-datasetsconf-file)
+- 3.2.5: [Annotations: the *datasets_annotation.conf* file](https://github.com/eead-csic-compbio/prunusmap_web#325-annotations-the-datasets_annotationconf-file)
    
 To configure PrunusMap you will need to edit the following **configuration files**
 under the *barleymap/conf* directory:
@@ -160,10 +162,13 @@ blastn_dbs_path PATH_TO_BLAST_DATABASES
 gmap_app_path PATH_TO_GMAP/bin/gmap
 gmap_dbs_path PATH_TO_GMAP_DATABASES
 gmapl_app_path PATH_TO_GMAP/bin/gmapl
+# miniprot
+miniprot_app_path PATH_TO_MINIPROT/miniprot
+miniprot_dbs_path PATH_TO_MINIPROT_DATABASES
 
 ########### Other
-citation Cantalapiedra_CP,_Boudiar_R,_Casas_AM,_Igartua_E,_Contreras-Moreira_B._BARLEYMAP:_physical_and_genetic_mapping_of_nucleotide_sequences_and_annotation_of_surrounding_loci_in_barley._Mol_Breeding_(2015)_35:13_DOI_10.1007/s11032-015-0253-1
-stdalone_app http://eead.csic.es/compbio/soft/barleymap/
+citation Ksouri_N,_Moreno_MA,_Contreras-Moreira_B,_Gogorcena_Y_(2024)_Mapping_the_genomic_landscape_of_peach_and_almond_with_PrunusMap._bioRxiv:2024.03.26.586732 
+stdalone_app https://github.com/Cantalapiedra/barleymap
 ```
 
 First, you will need to edit the *app_path* field to point
@@ -198,13 +203,13 @@ the previous fields to point to the same directories.
 #### 3.2.2 Databases: the *databases.conf* file
 
 A **database** represents a sequence reference (a genome or similar), which can be queried
-with one or more alignment tools (BLASTN, GMAP or HS-BLASTN in the current version of barleymap).
+with one or more alignment tools (BLASTN, GMAP or MINIPROT in the current version of PrunusMap).
 
 To look for position of sequences through alignment,
 barleymap requires at least one database to work with.
 It takes 3 steps to add a database to barleymap:
 
-1.  Create the files of the database with the corresponding tool from BLASTN, GMAP and/or HS-BLASTN
+1.  Create the files of the database with the corresponding tool from BLASTN, GMAP and/or MINIPROT
 (e.g. *makeblastdb* for BLASTN, *gmap_build* for GMAP).
 1. Put the database files under the path indicated in the *paths.conf* file
 for the corresponding aligner.
@@ -254,11 +259,11 @@ It takes 5 steps to add a map to barleymap:
 1. If the map is of type "anchored" (see below), create a file called *map_ID.database_ID*,
  for each database to be associated to this map, and put it
 under the folder created for the map in the previous step (e.g. *barleymap/maps/map_ID/map_ID.database_ID*).
-See [format of the map-database files](https://github.com/Cantalapiedra/barleymap#format-of-the-map-database-files)
+See [format of the map-database files](https://github.com/eead-csic-compbio/prunusmap_web#format-of-the-map-database-files)
 below for details.
 1. Create a file with the name *map_ID.chrom* and put it in the folder created for the map
 (e.g. *barleymap/maps/map_ID/map_ID.chrom*).
-See [format of the "chrom" file](https://github.com/Cantalapiedra/barleymap#format-of-the-chrom-file) below for details.
+See [format of the "chrom" file](https://github.com/eead-csic-compbio/prunusmap_web#format-of-the-chrom-file) below for details.
 1. Create a row in the *conf/maps.conf* file, with **10 space-separated fields**:
   - Name: an arbitrary name for the map, used by the user for referencing it and for printing purposes.
   - ID: the *map_ID* chosen above.
@@ -404,7 +409,7 @@ entry in the *paths.conf* file (e.g. *barleymap/datasets/dataset_ID/*).
 in the folder created for the dataset in the previous step (e.g. *barleymap/datasets/dataset_ID/dataset_ID.map_ID*).
 Note that these files could be created using *bmap_build_datasets*, as explained in following sections.
 However, if it is desired to create the files manually,
-see [format of the dataset-map files](https://github.com/Cantalapiedra/barleymap#format-of-the-dataset-map-files)
+see [format of the dataset-map files](https://github.com/eead-csic-compbio/prunusmap_web#format-of-the-dataset-map-files)
 below for details.
 
 1. Create a row in the conf/datasets.conf file, with **8 space-separated fields**:
@@ -551,9 +556,9 @@ Gene000090	GO:0005524
 
 ## 4) Tools and algorithms
 
-NOTE: in the web version of barleymap some of the options and parameters, which can be changed in
+NOTE: in the web version some of the options and parameters, which can be changed in
 the standalone version, have been fixed. Check
-[http://floresta.eead.csic.es/barleymap/help/](http://floresta.eead.csic.es/barleymap/help/).
+[https://prunusmap.eead.csic.es/prunusmap/help](https://prunusmap.eead.csic.es/prunusmap/help).
 
 ### 4.1) Main tools
 
@@ -684,27 +689,11 @@ Report *p* as the position of *q*.
 ```
 
 <sub style="font-size: 12px !important;">
-Figure. Schematic representation of the barleymap "hierarchical" algorithm.
-For the "greedy" algorithm all the query sequences are aligned to next database,
-instead of just the unaligned ones. For the "exhaustive" algorithm, the "align to next database" arrow
-should be moved to the box "Retrieve map positions" and change the tag "unaligned" to "unmapped".
+Figure. PRUNUSMAP pipeline. Several types of input can be queried (1): identifiers (query IDs), genomic positions or FASTA (query sequences). The alignment modes (2) support genomic, transcript and protein sequences. For nucleotides, BLASTN is used for genomic sequences and GMAP for transcripts/cDNAs; the "auto" uses both to maximize the alignment rate. For amino acid sequences, MINIPROT is used to align proteins to genomes considering splicing and frameshifts. Genomic positions enter the pipeline at the mapping module (3), where targets are associated with the queries, and after filtering (4), enriched with surrounding genes and markers. Finally, gene annotation such as protein domains might also be appended to the results.
 </sub>
 <p align="center">
-  <img width="450" height="470" src="http://floresta.eead.csic.es/barleymap/img/barleymap_popseq.pipeline_2.png">
+  <img width="450" height="470" src="https://github.com/eead-csic-compbio/prunusmap_web/blob/master/img/prunusflow.png">
 </p>
-
-In addition there are three **versions of the algorithm**: "greedy", "hierarchical" and "exhaustive".
-These versions cannot be specified as parameter of the application.
-Instead, have to be associated to each of the maps in their configuration.
-
-- In the "greedy" version, the list of unaligned queries is only updated for each database.
-Therefore, every query is searched in every database.
-
-- In the "hierarchical" version, a query is removed from the list of unaligned queries when an alignment
-hit has been found for the query, regardless of whether the query has map position or not.
-
-- In the "exhaustive" version, a query is removed from the list of unaligned queries when the query an alignment
-hit has been found for the query, and a map position has been associated to it.
 
 #### 4.1.2) Finding markers
 
@@ -815,210 +804,14 @@ chr7	4184387
 chr7	227367117
 ```
 
-### 4.2) Secondary tools
+## 5) Citation
 
-As explained above, the main barleymap tools, including those in the web version,
-return as result map positions for the queries. The hits from the alignment step remain
-hidden for the user. However, in some cases alignment results are preferred.
-These can be obtained with the secondary tools, which are available **only in the standalone version**.
+Ksouri N, Moreno MA, Contreras-Moreira B, Gogorcena Y (2024) Mapping the genomic landscape of peach and almond with PrunusMap. https://www.biorxiv.org/content/10.1101/2024.03.26.586732v1
 
-***
+Cantalapiedra, C.P., Boudiar, R., Casas, A.M. et al. BARLEYMAP: physical and genetic mapping of nucleotide sequences and annotation of surrounding loci in barley. Mol Breeding 35, 13 (2015). https://doi.org/10.1007/s11032-015-0253-1
 
-The *bmap_align_to_db* command allows obtaining the alignment results from FASTA formatted queries
-to one or more databases. The parameters of *bmap_align_to_db* can be obtained running it with "-h/--help":
 
-```
-Usage: bmap_align_to_db.py [OPTIONS] [FASTA_FILE]
-
-typical: bmap_align_to_db.py --databases=MorexGenome queries.fasta
-
-Options:
-  -h, --help            show this help message and exit
-  --databases=DATABASES_PARAM
-                        Comma delimited list of database names to align to
-                        (default all).
-  --databases-ids=DATABASES_IDS_PARAM
-                        Comma delimited list of database IDs to align to
-                        (default all).
-  --aligner=ALIGNER     Alignment software to use (default "gmap"). The "gmap"
-                        option means to use only GMAP. The "blastn" option
-                        means to use only Blastn. The "hsblastn" option means
-                        to use only HS-Blastn. The order and aligners can be
-                        explicitly specified by separating the names by ","
-                        (e.g.: blastn,gmap --> First Blastn, then GMAP).
-  --thres-id=THRES_ID   Minimum identity for valid alignments. Float between
-                        0-100 (default 98.0).
-  --thres-cov=THRES_COV
-                        Minimum coverage for valid alignments. Float between
-                        0-100 (default 95.0).
-  --threads=N_THREADS   Number of threads to perform alignments (default 1).
-  --search=SEARCH_TYPE  Whether obtain the hits from all DBs (greedy), only
-                        best score hits (best_score), or first hit found
-                        (hierarchical); (default greedy).
-  --ref-type=REF_TYPE   Whether use GMAP (std) or GMAPL (big), when using
-                        --databases-ids only.
-  -v, --verbose         More information printed.
-```
-
-Most of the parameters are the same used in the *bmap_align* command, and have already been explained above.
-The *--databases* (or *--databases-ids*), *--search* and *--ref-type* parameters are the same as some of the
-fields used to configure a map, and have also been explained (see Configuration of maps).
-
-The result of *bmap_align_to_db* is a table with 12 fields:
-- query_id: the name of the FASTA query.
-- subject_id: the chromosome or contig from the alignment hit.
-- identity: the percentage of identity from the alignment.
-- query_coverage: the percentage of coverage of the query in the alignment.
-- score: a score which corresponds to the bit score from blastn and to barleymap specific score for
-GMAP alignments, which takes into account both identity and query coverage.
-- strand: to which strand of the subject was aligned the query.
-- qstart: first position of the query in the alignment.
-- qend: last position of the query in the alignment.
-- sstart: first position of the subject in the alignment.
-- send: last position of the subject in the alignment.
-- database: to which database belongs the subject.
-- algorithm: which algorithm was used to perform the alignment.
-
-Note that rows starting with ">" or "#" are for database name and column headers, respectively.
-An example of the output file from bmap_align_to_db:
-
-```
->DB:150831_barley_pseudomolecules
-#query_id  subject_id  identity  query_coverage  score  strand  qstart  qend  sstart     send       database   algorithm
-m_10235    chr1        100.00    100.00          120.0  -       1       121   80265474   80265594   genome2.0  gmap
-m_19       chr7        100.00    100.00          196.0  -       1       197   17091119   17091315   genome2.0  gmap
-m_10       chr1        100.00    100.00          210.0  +       1       211   71173958   71174168   genome2.0  gmap
-m_1100     chr5        100.00    100.00          178.0  +       1       179   434303690  434303868  genome2.0  gmap
-m_1012     chr2        100.00    100.00          226.0  +       1       227   29125654   29125880   genome2.0  gmap
-```
-
-***
-
-The *bmap_align_to_map* command allows obtaining the alignment results from FASTA formatted queries
-to one or more maps, i.e. to the databases which have been configured in barleymap for those maps
-(see configuration of maps). The parameters of *bmap_align_to_map* can be obtained running it with "-h/--help":
-
-```
-Usage: bmap_align_to_map.py [OPTIONS] [FASTA_FILE]
-
-typical: bmap_align_to_map.py --maps=MorexGenome queries.fasta
-
-Options:
-  -h, --help            show this help message and exit
-  --maps=MAPS_PARAM     Comma delimited list of Maps to show (default all).
-  --aligner=ALIGNER     Alignment software to use (default "gmap"). The "gmap"
-                        option means to use only GMAP. The "blastn" option
-                        means to use only Blastn. The "hsblastn" option means
-                        to use only HS-Blastn. The order and aligners can be
-                        explicitly specified by separating the names by ","
-                        (e.g.: blastn,gmap --> First Blastn, then GMAP).
-  --thres-id=THRES_ID   Minimum identity for valid alignments. Float between
-                        0-100 (default 98.0).
-  --thres-cov=THRES_COV
-                        Minimum coverage for valid alignments. Float between
-                        0-100 (default 95.0).
-  --threads=N_THREADS   Number of threads to perform alignments (default 1).
-  --search=SEARCH_TYPE  Whether obtain the hits from all DBs (greedy), only
-                        best score hits (best_score), or first hit found
-                        (hierarchical); (default greedy).
-  -v, --verbose         More information printed.
-```
-
-Most of the parameters are the same used in the *bmap_align* command, and have already been explained above.
-The *--search* parameter would override the algorithm configured as default for the map.
-
-The result of *bmap_align_to_map* is a table with the same format as that of *bmap_align_to_db* (see above).
-
-Note that rows starting with ">" correspond to maps names.
-An example of the output file from bmap_align_to_map:
-
-```
->>Map:morex_genome
-#query_id   subject_id  identity  query_coverage  score   strand  qstart  qend  sstart    send      database                       algorithm
-i_11_20855  chr1H       99.20     100.00          238.08  +       1       241   81133442  81133992  150831_barley_pseudomolecules  gmap
-i_12_10235  chr1H       100.00    100.00          120.0   -       1       121   80265474  80265594  150831_barley_pseudomolecules  gmap
-i_BK_19     chr7H       100.00    100.00          196.0   -       1       197   17091119  17091315  150831_barley_pseudomolecules  gmap
-i_BK_10     chr1H       100.00    100.00          210.0   +       1       211   71173958  71174168  150831_barley_pseudomolecules  gmap
-i_11_10030  chr1H       98.30     100.00          235.92  +       1       241   13590814  13591054  150831_barley_pseudomolecules  gmap
-```
-
-### 4.3) Configuration tools
-
-These are several tools which are included with barleymap, but do not perform searches in the
-barleymap configured resources. These are intended to help in the configuration of the application,
-specially when dealing with datasets. Note that these tools use the barleymap main tools from the standalone version,
-and therefore are included **only in the standalone version**. These tools could be used
-with the standalone version to check or create resources to be used with barleymap web version though.
-
-***
-
-The *bmap_config* command returns a report including all the resources which have been configured with
-the app, including:
-- Paths (from paths.conf).
-- Databases (from databases.conf).
-- External databases: these are databases not included in the databases.conf file but which are found in the same
-folder as configured databases. These databases can be used with the bmap_align_to_db tool
-by means of the --databases-ids parameter.
-- Maps (from maps.conf).
-- Datasets and their annotations (from datasets.conf and datasets_annotation.conf).
-
-***
-
-The *bmap_build_datasets* is a script which uses the *datasets.conf* file as input, and tries to generate
-the files for those datasets (markers, genes, maps, etc.), to be included as resources in barleymap.
-
-Lets say that the user has a number of files from markers of genes which he wants to use as datasets in barleymap.
-The user must configure the *datasets.conf* file, in which the files with the data for those datasets will be referenced.
-Then, the user could need to generate the files with the actual positions of those
-datasets to the maps, so that they can be retrieved by barleymap. Basically, we would need to perform alignments with
-FASTA sequences, reformat gtf or bed files, etc. In turn, the user can use the *bmap_build_datasets*, which will
-run *bmap_align* for datasets of type FASTA, and will reformat GTF and BED files, etc. Then the user just will need
-to put those files under the appropiate directory where barleymap has been configured to read datasets.
-
-When there are datasets which the user wants to keep in the configuration file, but must not be processed
-by *bmap_build_datasets*, the user can "comment" those datasets in the *datasets.conf* file with the prefix ">".
-Note that if he uses "#" instead of ">" the dataset will be fully commented,
-and will not be used at all by barleymap.
-
-The parameters of *bmap_build_datasets* are:
-
-```
-Usage: bmap_build_datasets
-
-Options:
-  -h, --help            show this help message and exit
-  --threads=N_THREADS   Number of threads to perform alignments (default 1).
-  --dataset=DATASET_PARAM
-                        A single dataset to process. By default all datasets
-                        are processed.
-  -v, --verbose         More information printed.
-```
-
-The *--threads* parameter will be used as input for datasets of type FASTA (to perform the alignments).
-
-Also the user can run the *bmap_build_datasets* for a single dataset (*--dataset* parameter),
-for example when a new dataset is to be added to a barleymap application for which the other datasets
-had already been created previously.
-
-***
-
-The *bmap_datasets_index* is used to create an index file for the datasets.
-Currently, the script can be run for only a single dataset. For example, to process
-the *datasets.conf* file the user would need to loop over the file externally and run
-*bmap_datasets_index* for each of the iteration steps with:
-
-```
-bmap_datasets_index current_dataset
-```
-
-Note that the *current_dataset* is the file which barleymap uses to read the dataset (i.e. the one which could
-be generated with *bmap_build_datasets*).
-As a result, *bmap_datasets_index* returns a file called "current_dataset.idx", which should be placed in the same
-directory where the *current_dataset* file is located and read by barleymap.
-
-Note that for large dataset files, using index files will make the retrieval of markers, genes, etc. faster,
-whereas for small dataset files is likely better to not use index files.
-
-README is part of Barleymap.
+README is part of PrunusMap.
 Copyright (C)  2013-2014  Carlos P Cantalapiedra.
+Copyright (C) 2024 Bruno Contreras Moreira and Najla Ksouri
 (terms of use can be found within the distributed LICENSE file).
