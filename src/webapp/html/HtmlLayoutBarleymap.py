@@ -179,20 +179,23 @@ class HtmlLayoutBarleymap(object):
             <br/>
             <br/>27-06-2024:<br/>
             . added new genomes: </br>
-                - Prunus persica cv.Sovetskiy </br>
-                - Prunus persica cv.124Pan </br>
-                - Prunus dulcis cv.Texas_v3.phase0 </br>
-                - Prunnus dulcis cv.Texas_v3.phase1 </br>
-                - Prunus armeniaca cv. Rojo Pasion (Apricot without seeds) </br>
-                - Prunus avium cv.Tieton </br>
-                - Prunus avium cv.Satonishiki </br>
-                - Prunus mume cv.Tortuosa </br>
-                - Prunus ferganensis </br>
-
-            . added new arrays </br>
-                - 6K cherry array </br>
-                - The 16k peach array was replaced by the 18K array as the later is more comprehensive, including all the SNPs from the 16K array along with additional ones. </br>
-                - All SNPs were mapped against the genome references of all species </br>
+                <ul>
+                    <li> Prunus persica cv.Sovetskiy </li>
+                    <li> Prunus persica cv.124Pan </li>
+                    <li> Prunus dulcis cv.Texas_v3.phase0 </li>
+                    <li> Prunnus dulcis cv.Texas_v3.phase1 </li>
+                    <li> Prunus armeniaca cv. Rojo Pasion (Apricot without seeds) </li>
+                    <li> Prunus avium cv.Tieton </li>
+                    <li> Prunus avium cv.Satonishiki </li>
+                    <li> Prunus mume cv.Tortuosa </li>
+                    <li> Prunus ferganensis </li>
+                </ul>
+            . added new arrays: </br>
+                <ul>
+                    <li> 6K cherry array </li>
+                    <li> The 16k peach array was replaced by the 18K array as the later is more comprehensive, including all the SNPs from the 16K array along with additional ones. </li>
+                    <li> All SNPs were mapped against the genome references of all species </li>
+                </ul>
 
             <br/>23-05-2024:<br/>
             . added "Align proteins" tool</br>            
