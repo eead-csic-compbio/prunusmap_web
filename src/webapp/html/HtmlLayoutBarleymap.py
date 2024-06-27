@@ -177,6 +177,23 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/>27-06-2024:<br/>
+            . added new genomes: </br>
+                - Prunus persica cv.Sovetskiy </br>
+                - Prunus persica cv.124Pan </br>
+                - Prunus dulcis cv.Texas_v3.phase0 </br>
+                - Prunnus dulcis cv.Texas_v3.phase1 </br>
+                - Prunus armeniaca cv. Rojo Pasion (Apricot without seeds) </br>
+                - Prunus avium cv.Tieton </br>
+                - Prunus avium cv.Satonishiki </br>
+                - Prunus mume cv.Tortuosa </br>
+                - Prunus ferganensis </br>
+
+            . added new arrays </br>
+                - 6K cherry array </br>
+                - The 16k peach array was replaced by the 18K array as the later is more comprehensive, including all the SNPs from the 16K array along with additional ones. </br>
+                - All SNPs were mapped against the genome references of all species </br>
+
             <br/>23-05-2024:<br/>
             . added "Align proteins" tool</br>            
             <br/>20-05-2024:<br/>
