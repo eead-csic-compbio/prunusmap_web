@@ -227,10 +227,52 @@ class HtmlComponentsHelp(object):
                         <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
                         <br/>
                         
-                        The next is a list of datasets whose map positions have been pre-computed and stored in this instance of the web application.
+                        Datasets in PrunusMap are organized into 3 groups: <strong> genes, markers and Uniprot proteins </strong> often associated with AlphaFold structural models.
+
+                        Each dataset consists of elements of these categories, along with their precomputed map positions determined through sequence alignment against the reference database.
                         Note that the
                         <a href="https://github.com/Cantalapiedra/barleymap">standalone version</a> or a custom
                         <a href="https://github.com/eead-csic-compbio/prunusmap_web">web version</a> of Prunusmap could be used to create other datasets.
+
+                        <ol> 
+                            <li> Genes </li>
+                        </ol>
+                        
+                        <table class="table>
+                            <tr>
+                                <th> Maps </th>
+                                <th> Gene IDs </th>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_NCBI_V1 </td>
+                                <td> PRUPE_ppa011509mg </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_NCBI_V2 </td>
+                                <td> LOC109948900 </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_JGI_V1 </td>
+                                <td> ppa000092m.g </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Lovell_JGI_V2 </td>
+                                <td> Prupe.1G001200 </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_ChineseCling_GDR_V1 </td>
+                                <td> evm.TU.contig279.5 </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Zhongyoutao14_GDR_V1 </td>
+                                <td> Pp01G000510 </td>
+                            <tr>
+                            <tr>
+                                <td> Pp_Sovetskiy_NCBI_V1 </td>
+                                <td> gene-ndhA </td>
+                            </tr>
+
+                        </table>
                         
                         <ul class="help_list">
                         
@@ -438,9 +480,17 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> Pp_124Pan_GDR_V1 </td>
                                 <td> 124Pan (flat peach)  </td>
                                 <td> CNA0019231 </td>
-                                <td><strong>8</strong>;Pp01_RaG00--Pp01_RaG00 </td>
+                                <td><strong>8</strong>;Pp01_RaG00--Pp08_RaG00 </td>
                                 <td><strong>6</strong>; scaffold_12_RaG00,.. </td>
                                 <td> [5] </td>
+                            </tr>
+                            <tr>
+                                <td> Pp_Sovetskyi_NCBI_V1 </td>
+                                <td> Sovetskyi </td>
+                                <td> GCA_022343065.3 </td>
+                                <td><strong>8</strong>; CM039277.1--CM039284.1 </td>
+                                <td><strong>228</strong>: JAJDMZ010000009.1--JAJDMZ010000236.1 </td>
+                                <td> [6] </td>
                             </tr>
                             <tr>
                                 <td> Pd_Texas_NCBI_V2 </td>
@@ -448,7 +498,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> GCA_902201215.1 </td>
                                 <td><strong>8</strong>; NC_047650.1--NC_047657.1 </td>
                                 <td><strong>683</strong>; NW_023010004.1--NW_023010686.1 </td>
-                                <td> [6] </td>
+                                <td> [7] </td>
                             </tr>
                             <tr>
                                 <td> Pd_Texas_GDR_V2 </td>
@@ -456,7 +506,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> GCA_902201215.1 </td>
                                 <td><strong>8</strong>; Pd01--Pd08 </td>
                                 <td><strong>683</strong>; pdulcis26_s0345,... </td>
-                                <td> [6] </td>
+                                <td> [7] </td>
                             </tr>
                             <tr>
                                 <td> Pd_Lauranne_GDR_V1 </td>
@@ -464,17 +514,31 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> AP019297-AP019304 </td>
                                 <td><strong>8</strong>; Pd01-Pd08 </td>
                                 <td> 0 </td>
-                                <td> [7] </td>
+                                <td> [8] </td>
                             </tr>
                             <tr>
-                                <td> Pd_Nonpareil_V1 </td>
+                                <td> Pd_Nonpareil_GDR_V1 </td>
                                 <td> Nonpareil  </td>
                                 <td> GCA_021292205 </td>
                                 <td><strong>8</strong>; CM037988.1--cm037995.1 </td>
                                 <td><strong>95</strong>; AJFAZ020000011.1--AJFAZ020000105.1 </td>
-                                <td> [8] </td>
+                                <td> [9] </td>
                             </tr>
-                               
+                            <tr>
+                                <td> Pd_Texas_GDR_V3.Phase0 </td>
+                                <td> Texas.Phase0 </td>
+                                <td> ERP158378 </td>
+                                <td><strong>8</strong>; Chr01-Chr08 </td>
+                                <td> -- </td>
+                                <td> [10] </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_GDR_V3.Phase1 </td>
+                                <td> Texas.Phase1 </td>
+                                <td> ERP158378 </td>
+                                <td><strong>8</strong>; Chr01-Chr08 </td>
+                                <td> -- </td>
+                            </tr>
                              <tr>
                                 <td> Pa_RojPas_NCBI_V1 </td>
                                 <td> Rojo Pasion (apricot without seed) </td>
@@ -507,57 +571,17 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td><strong>32</strong>; scaffold9--scaffold32 </td>
                                 <td> [12] </td>
                             </tr>
-                            
+                            <tr>
+                                <td> Pferganensis_GDR_V2 </td>
+                                <td> Prunus ferganensis </td>
+                                <td> -- </td>
+                                <td><strong> 24</strong>; scaffold9--scaffold32 </td>
+                                <td> -- </td>
+                                <td> [13] </td>
+                            </tr>
                              
                         </table>
 
-
-                        <ul class="help_list">
-                            <li><strong><i>Pp_NCBI_V1</strong>: Prunus persica</i> cv. Lovell<sup>[1]</sup></li>
-                                <br/>
-                                
-                                The first published peach genome with NCBI annotation<sup>[11]</sup>. 
-                                Chromosome names look like NW_006760385.1, corresponding to assembly GCF_000346465.1.
-                                
-                                <br/><br/>
-                            <li><strong><i>Pp_NCBI_V2</strong>: Prunus persica</i> cv. Lovell<sup>[2]</sup></li>
-                                <br/>
-                               
-                                Current peach genome with NCBI annotation<sup>[11]</sup>.
-                                Chromosome names are NC_034009.1 .. NC_034016.1, with unplaced scaffolds from NW_018027148.1 on.
-                                This corresponds to assembly GCF_000346465.2.
-                                
-                                <br/><br/>
-                            <li><strong>Pp_JGI_V2</strong>: Prunus persica</i> cv. Lovell<sup>[2]</sup></li>
-                                <br/>
-                               
-                                Current peach genome with chromosome names and gene models from JGI <sup>[10]</sup>.
-                                Chromosome names are Pp01 to Pp08, with unplaced scaffolds from scaffold_12 on.
-
-                            <li><strong>Pd_NCBI_V2</strong>: Prunus dulcis</i> cv. Texas<sup>[3]</sup></li>
-                                <br/>
-                    
-                                Current almond genome with NCBI annotation<sup>[11]</sup>.
-                                Chromosome names are NC_047650.1 to NC_047657.1 with unplaced scaffolds from NW_023010004.1 on.
-                                This corresponds to assembly GCF_902201215.1.
-
-                            <li><strong>Pd_Texas_GDR_V2</strong>: Prunus dulcis</i> cv. Texas<sup>[3]</sup></li>
-                                <br/>
-                    
-                                Chromosome names are Pd01 to Pd08 with unplaced scaffolds from pdulcis26_s034 on.
-                                This corresponds to assembly GCF_902201215.1.
-                            <li><strong>Pd_Nonpareil_GDR_V1</strong>: Prunus dulcis</i> cv. Nonpareil<sup>[15]</sup></li>
-                                <br/>
-
-                                Chromosome names are CM037988.1 to CM037995.1 with unplaced scaffolds from AJFAZ020000011.1 on.
-                                This corresponds to assembly GCA_021292205.
-                            <li><strong>Pd_Lauranne_GDR_V1</strong>: Prunus dulcis</i> cv. Lauranne<sup>[16]</sup></li>
-                                <br/>
-
-                                Chromosome names are Pd01 to Pd08.
-                                This corresponds to assembly <a href="https://www.ebi.ac.uk/ena/browser/view/AP019297-AP019304">AP019297-AP019304</a>.
-
-                        </ul>
                         <br/>
                         """.format(base_url))
         
