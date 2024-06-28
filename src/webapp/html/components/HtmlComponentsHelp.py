@@ -235,97 +235,154 @@ class HtmlComponentsHelp(object):
                         <a href="https://github.com/eead-csic-compbio/prunusmap_web">web version</a> of Prunusmap could be used to create other datasets.
 
                         <ol> 
-                            <li> Genes </li>
-                        </ol>
-                        
-                        <table class="table>
+                            <li><strong> Genes </strong></li>
+
+                        <br/>
+                        <table class="table">
                             <tr>
                                 <th> Maps </th>
                                 <th> Gene IDs </th>
+                                <th> Total </th>
                             </tr>
                             <tr>
                                 <td> Pp_Lovell_NCBI_V1 </td>
                                 <td> PRUPE_ppa011509mg </td>
+                                <td> 28,087 </td>
                             </tr>
                             <tr>
                                 <td> Pp_Lovell_NCBI_V2 </td>
                                 <td> LOC109948900 </td>
+                                <td> 25,030 </td>
                             </tr>
                             <tr>
                                 <td> Pp_Lovell_JGI_V1 </td>
                                 <td> ppa000092m.g </td>
+                                <td> 27,864 </td>
                             </tr>
                             <tr>
                                 <td> Pp_Lovell_JGI_V2 </td>
                                 <td> Prupe.1G001200 </td>
+                                <td> 26,873 </td>
                             </tr>
                             <tr>
                                 <td> Pp_ChineseCling_GDR_V1 </td>
                                 <td> evm.TU.contig279.5 </td>
+                                <td> 26,335 </td>
                             </tr>
                             <tr>
                                 <td> Pp_Zhongyoutao14_GDR_V1 </td>
                                 <td> Pp01G000510 </td>
+                                <td> 30,181 </td>
+                            </tr>
                             <tr>
+                                <td> Pp_124Pan_GDR_V1 </td>
+                                <td> P124PAN00019 </td>
+                                <td> 25,155 </td>
+                            </tr>
                             <tr>
                                 <td> Pp_Sovetskiy_NCBI_V1 </td>
                                 <td> gene-ndhA </td>
+                                <td> 128 </td>
                             </tr>
-
+                            <tr>
+                                <td> Pd_Texas_GDR_V2 </td>
+                                <td> Prudul26A002130 </td>
+                                <td> 27,042 </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_NCBI_V2 </td>
+                                <td> LOC117629010 </td>
+                                <td> 25,445 </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_GDR_V3.Phase0 </td>
+                                <td> TexasF0_G5 </td>
+                                <td> 29,145 </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Texas_GDR_V3.Phase1 </td>
+                                <td> TexasF1_G30142 </td>
+                                <td> 30,150 </td>
+                            </tr>
+                            <tr>
+                                <td> Pd_Lauranne_GDR_V1 </td>
+                                <td> Prudu_020927_v1.0 </td>
+                                <td> 23,266 </tr>
+                            </tr>
+                            <tr>
+                                <td> Pd_Nonpareil_GDR_V1 </td>
+                                <td> L3X38_000409 </td>
+                                <td> 45,581 </td>
+                            </tr>
+                            <tr>
+                                <td> Pa_RojPas_NCBI_V1 </td>
+                                <td> gene_CURHAP_LOCUS15 </td>
+                                <td> 52,344 </td>
+                            </tr>
+                            <tr>
+                                <td> Pav_Satonishiki_NCBI_V1 </td>
+                                <td> LOC110751831 </td>
+                                <td> 28,800 </td>
+                            </tr>
+                            <tr>
+                                <td> Pav_Tieton_GDR_V1 </td>
+                                <td> FUN_000009 </td>
+                                <td> 39,984 </td>
+                            </tr>
+                            <tr>
+                                <td> Pm_Tortuosa_GDR_V1 </td>
+                                <td> PmuVar_Chr2_0001 </td>
+                                <td> 29,706 </td>
+                            </tr>
+                            <tr>
+                                <td> Pferganensis_GDR_V2 </td>
+                                <td> Pfe01g0002 </td>
+                                <td> 28,587 </td>
+                            </tr>
                         </table>
-                        
-                        <ul class="help_list">
-                        
-                            <li>
-                                <b> IRSC 9K markers</b> <i>Prunus persica</i> dataset<sup>[13,14]</sup>: identifiers look like SNP_IGA_134631, snp_scaffold_1_46157131, snp_1_46757382, Pp8Cl or RosCOS1338-411. 
-                                <br/>
-                                A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/species/rosaceae_family_genera/IRSC_SNP_array">GDR</a>.
-                            </li>
-                           
-                            <li>
-                                <b>IRSC 16K markers</b> <i>Prunus persica</i> dataset<sup>[14,15]</sup>: identifiers look like SNP_IGA_679 or Peach_AO_0000136. 
-                                <br/>
-                                A full list of markers and their sequences can be found at the <a href="https://www.rosaceae.org/Analysis/431">GDR</a>.
-                            </li>
 
-                            <li>
-                                <b>AdafuelxFlordaguard</b> peach rootstock markers<sup>[16]</sup> with physical and genetic positions: identifiers look like Pp01_60632_SC_0.
-                            </li>
+                        <br/>
                             
-                            <li>
-                                <b>Axiom 60K</b> <i>Prunus dulcis</i> dataset <sup>[17]</sup>: identifiers look like AX-586141685 or 64598_Pd08_Pd08.
-                            </li>
-                            
-                            <li>
-                                <b>UniProt proteins</b> of <i>Prunus persica</i> dataset <sup>[18]</sup>, mapped with [miniprot](https://github.com/lh3/miniprot): identifiers look like E3W0H3_PRUPE.
-                            </li>
-                            
-                            <li>
-                                <b>UniProt proteins</b> of <i>Prunus dulcis</i> cv.Texas_NCBIv2: identifiers looks like A0A1W6CB65_PRUDU.
-                            </li>
-                            
-                            <li>
-                                <b>JGI gene models</b> of <i>Prunus persica</i> <sup>[19]</sup>: identifiers look like ppa000003m.g and Prupe.1G000100 for respectively v1 and v2.
-                            </li>
+                            <li><strong> Markers </strong> </li>
+                        <br/>
 
-                            <li>
-                                <b>NCBI gene models</b> of <i>Prunus persica</i> <sup>[20]</sup>: identifiers look like PRUPE_ppa017353mg and LOC18793189 for respectively v1 and v2.
-                            </li>
+                        <table class="table">
+                            <tr>
+                                <th> Arrays </th>
+                                <th> IDs </th>
+                                <th> Total </th>
+                            </tr>
+                            <tr>
+                                <td> IRSC 9K peach </td>
+                                <td> SNP_IGA_134631, snp_scaffold_1_46157131, Pp3Cl, RosCOS1338-411 </td>
+                                <td> 9,000 </td>
+                            </tr>
+                            <tr>
+                                <td> IRSC 18K peach </td>
+                                <td> SNP_IGA_679, Peach_AO_0000136, RosCOS1549-533, Pp2Cl, snp_scaffold_2_255513 </td>
+                                <td> 18,000 </td>
+                            </tr>
+                            <tr> 
+                                <td> Axiom 60K almond </td>
+                                <td> AX-158803044 </td>
+                                <td> 71,846 </td>
+                            </tr>
+                            <tr>
+                                <td> IRSC 6K cherry </td>
+                                <td> RosCOS1139-146_snp_sweet_cherry_Pp1_43832684 </td>
+                                <td> 5,696 </td>
+                            </tr>
+                            <tr>
+                                <td> Adafuel </td>
+                                <td> Pp01_10008318_YC </td>
+                                <td> 7,831 </td>
+                            </tr>
+                        </table>
 
-                            <li>
-                                <b>NCBI gene models</b> of <i>Prunus dulcis</i> <sup>[20]</sup>: identifiers look like LOC117629531.
-                            </li>
+                        <br/></br>
+                            <li><strong> UniProt proteins </strong> </li>
+                        <ol>
 
-                            <li>
-                                <b>GDR gene models</b> of <i>Prunus dulcis</i> cv.Lauranne_v1: identifiers look like Prudu_020918_v1.0.
-                            </li>
-
-                            <li>
-                                <b>GDR gene models</b> of <i>Prunus dulcis</i> cv.Nonpareil_v1: identifiers look like L3X38_000408.
-                            </li>
-                            
-                        </ul>
-                        
                         <br/>We shall be pleased to add
                         any dataset you suggest to the web application, granted that its use is free and public.
                         <br/><br/>
