@@ -177,6 +177,8 @@ class HtmlLayoutBarleymap(object):
             text_buffer.append("""
             <br/><strong>Latest changes</strong>
             <br/>
+            <br/> 02-07-2024: <br/>
+            . added Prunus davidiana genome from GDR (Chinese wild peach)
             <br/> 28-06-2024: <br/>
             . added the protein list of Prunus armeniaca </br>
             <br/>27-06-2024:<br/>
