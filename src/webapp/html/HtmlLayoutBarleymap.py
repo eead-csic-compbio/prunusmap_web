@@ -178,7 +178,13 @@ class HtmlLayoutBarleymap(object):
             <br/><strong>Latest changes</strong>
             <br/>
             <br/> 02-07-2024: <br/>
-            . added Prunus davidiana genome from GDR (Chinese wild peach)
+            . added: <br/>
+                <ul> 
+                <li> Prunus davidiana v2 from GDR (Chinese wild peach) </li>
+                <li> Prunus mira v2 from GDR </li>
+                <li> Prunus kansensis v2 from GDR </li>
+                </ul>
+
             <br/> 28-06-2024: <br/>
             . added the protein list of Prunus armeniaca </br>
             <br/>27-06-2024:<br/>
