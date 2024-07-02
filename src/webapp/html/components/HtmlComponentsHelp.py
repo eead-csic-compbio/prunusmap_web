@@ -285,6 +285,26 @@ class HtmlComponentsHelp(object):
                                 <td> 128 </td>
                             </tr>
                             <tr>
+                                <td> Pdavidiana_GDR_V2 </td>
+                                <td> Pda01g0001 </td>
+                                <td> 27,236 </td>
+                            </tr>
+                            <tr>
+                                <td> Pferganensis_GDR_V2 </td>
+                                <td> Pfe01g0001 </td>
+                                <td> 28,587 </td>
+                            </tr>
+                                <td> Pkansuensis_GDR_V2 </td>
+                                <td> Pka01g0001 </td>
+                                <td> 26,986 </td> 
+                            </tr>
+                            <tr>
+                                <td> Pmira_GDR_V2 </td>
+                                <td> Pmi01g0001 </td>
+                                <td> 28,519 </td>
+                            </tr>
+
+                            <tr>
                                 <td> Pd_Texas_GDR_V2 </td>
                                 <td> Prudul26A002130 </td>
                                 <td> 27,042 </td>
@@ -333,11 +353,6 @@ class HtmlComponentsHelp(object):
                                 <td> Pm_Tortuosa_GDR_V1 </td>
                                 <td> PmuVar_Chr2_0001 </td>
                                 <td> 29,706 </td>
-                            </tr>
-                            <tr>
-                                <td> Pferganensis_GDR_V2 </td>
-                                <td> Pfe01g0002 </td>
-                                <td> 28,587 </td>
                             </tr>
                         </table>
 
@@ -550,6 +565,38 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> [6] </td>
                             </tr>
                             <tr>
+                                <td> Pdavidiana_GDR_V2 </td>
+                                <td> Prunus davidiana </td>
+                                <td> -- </td>
+                                <td><strong> 8 </strong>; Pda01-Pda08 </td>
+                                <td><strong>556</stong>; ptg000009l </tr>
+                                <td> [7] </td>
+                            </tr>
+                            <tr>
+                                <td> Pferganensis_GDR_V2 </td>
+                                <td> Prunus ferganensis </td>
+                                <td> -- </td>
+                                <td><strong> 8 </strong>; Pfe01-Pfe08 </td>
+                                <td><strong>439</stong>; ptg000004l </tr>
+                                <td> [7] </td>
+                            </tr>
+                            <tr>
+                                <td> Pkansuensis_GDR_V2 </td>
+                                <td> Prunus kansuensis </td>
+                                <td> -- </td>
+                                <td><strong> 8 </strong>; Pka01-Pka08 </td>
+                                <td><strong>330</stong>; ptg000014l </tr>
+                                <td> [7] </td>
+                            </tr>
+                            <tr>
+                                <td> Pmira_GDR_V2 </td>
+                                <td> Prunus mira </td>
+                                <td> -- </td>
+                                <td><strong> 8 </strong>; Pmi01-Pmi08 </td>
+                                <td><strong></stong>; ptg000011l </tr>
+                                <td> [7] </td>
+                            </tr>
+                            <tr>
                                 <td> Pd_Texas_NCBI_V2 </td>
                                 <td> Texas  </td>
                                 <td> GCA_902201215.1 </td>
@@ -627,14 +674,6 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td><strong>8</strong>; Chr1--Chr8 </td>
                                 <td><strong>32</strong>; scaffold9--scaffold32 </td>
                                 <td> [12] </td>
-                            </tr>
-                            <tr>
-                                <td> Pferganensis_GDR_V2 </td>
-                                <td> Prunus ferganensis </td>
-                                <td> -- </td>
-                                <td><strong> 24</strong>; scaffold9--scaffold32 </td>
-                                <td> -- </td>
-                                <td> [13] </td>
                             </tr>
                              
                         </table>
