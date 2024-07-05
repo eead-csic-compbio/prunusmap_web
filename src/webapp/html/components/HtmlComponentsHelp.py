@@ -680,7 +680,7 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                 <td> Tortuosa  </td>
                                 <td> -- </td>
                                 <td><strong> 8; </strong> Chr1 - Chr8 </td>
-                                <td><strong> 32; </strong> scaffold9 - scaffold32 </td>
+                                <td><strong> 24; </strong> scaffold9 - scaffold32 </td>
                                 <td> [15] </td>
                             </tr>
                              
