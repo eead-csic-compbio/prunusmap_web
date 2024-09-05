@@ -175,63 +175,25 @@ class HtmlLayoutBarleymap(object):
         text_buffer = []
         if show_last_changes:
             text_buffer.append("""
+
             <br/><strong>Latest changes</strong>
             <br/>
-            <br/> 02-07-2024: <br/>
-            . added: <br/>
-                <ul> 
-                <li> Prunus davidiana v2 from GDR (Chinese wild peach) </li>
-                <li> Prunus mira v2 from GDR </li>
-                <li> Prunus kansensis v2 from GDR </li>
-                </ul>
 
-            <br/> 28-06-2024: <br/>
-            . added the protein list of Prunus armeniaca </br>
-            <br/>27-06-2024:<br/>
-            . added new genomes: </br>
-                <ul>
-                    <li> Prunus persica cv.Sovetskiy </li>
-                    <li> Prunus persica cv.124Pan </li>
-                    <li> Prunus dulcis cv.Texas_v3.phase0 </li>
-                    <li> Prunnus dulcis cv.Texas_v3.phase1 </li>
-                    <li> Prunus armeniaca cv. Rojo Pasion (Apricot without seeds) </li>
-                    <li> Prunus avium cv.Tieton </li>
-                    <li> Prunus avium cv.Satonishiki </li>
-                    <li> Prunus mume cv.Tortuosa </li>
-                    <li> Prunus ferganensis </li>
-                </ul>
-            . added new arrays: </br>
-                <ul>
-                    <li> 6K cherry array </li>
-                    <li> The 16k peach array was replaced by the 18K array as the later is more comprehensive, including all the SNPs from the 16K array along with additional ones. </li>
-                    <li> All SNPs were mapped against the genome references of all species </li>
-                </ul>
-
-            <br/>23-05-2024:<br/>
-            . added "Align proteins" tool</br>            
-            <br/>20-05-2024:<br/>
-            . added new map for Prunus persica cv "ChineseCling" from GDR </br>
-            . added new map for Prunus persica cv "Zhongyoutao14" from GDR </br>
-            <br/>19-05-2024:<br/>
-            . added the cultivar extension "Lovell" to Prunus persica maps </br>
-            <br/>29-03-2024:<br/>
-            . posted bioRxiv preprint <a href="https://doi.org/10.1101/2024.03.26.586732">https://doi.org/10.1101/2024.03.26.586732</a><br/>
-            <br/>01-12-2023:<br/>
-            . added Prunus dulcis cv.Texas_NCBIv2 Uniprot Proteins</br>
-            . added Adafuel markers</br>
-            <br/>01-10-2023:<br/>
-            . added SNP markers from peach 16k array and 60k Axiom SNP: markers</br> 
-            . added <em> Prunus dulcis </em> genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2</br>
-            <br/>29-09-2023:<br/>
-            . added first version of <em>Prunus persica</em> genome from JGI
-            <br/>
-            <br/>27-09-2023:<br/>
-            . Added SNP markers from the peach 9k array.
-            <br/> 
-            <br/>27-07-2023:<br/>
-            . Web server up and running.
-            <br/>
-
+<textarea id="changes" name="changes" rows="3" cols="120" readonly>
+02-07-2024 added Prunus davidiana v2 (Chinese wild peach), P. mira v2, P. kansensis v2 from GDR
+28-06-2024 added the protein list of Prunus armeniaca 
+27-06-2024 added Prunus persica cv Sovetskiy, P. persica cv 124Pan, P. dulcis cv Texas_v3 phase0 & phase1, P. armeniaca cv Rojo Pasion (seedless apricot), P. avium cv Tieton, P. avium cv Satonishiki, P. mume cv Tortuosa, P. ferganensis
+27-06-2024 added 6K cherry array; replaced 16k peach array with 18K for being more comprehensive; SNPs were mapped against the genome references of all species 
+23-05-2024 added "Align proteins" tool
+20-05-2024 added Prunus persica cv ChineseCling and P. persica cv Zhongyoutao14 from GDR
+19-05-2024 added the cultivar extension "Lovell" to Prunus persica maps
+29-03-2024 posted bioRxiv preprint https://doi.org/10.1101/2024.03.26.586732
+01-12-2023 added Prunus dulcis cv Texas_NCBIv2 Uniprot Proteins and Adafuel genetic markers
+01-10-2023 added SNP markers from peach 16k array and 60k Axiom SNPs, plus Prunus dulcis genomes from GDR: Nonpareil.v1, Lauranne.v1 and Texas.v2
+29-09-2023 added first version of Prunus persica genome from JGI
+27-09-2023 added SNP markers from the peach 9k array
+27-07-2023 Web server up and running
+</textarea>
 
         """.format(base_url))
             
