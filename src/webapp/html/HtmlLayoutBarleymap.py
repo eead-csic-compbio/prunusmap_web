@@ -180,6 +180,7 @@ class HtmlLayoutBarleymap(object):
             <br/>
 
 <textarea id="changes" name="changes" rows="3" cols="120" readonly>
+05-09-2024 set Pp_Lovell_NCBI_V2 as default map
 02-07-2024 added Prunus davidiana v2 (Chinese wild peach), P. mira v2, P. kansensis v2 from GDR
 28-06-2024 added the protein list of Prunus armeniaca 
 27-06-2024 added Prunus persica cv Sovetskiy, P. persica cv 124Pan, P. dulcis cv Texas_v3 phase0 & phase1, P. armeniaca cv Rojo Pasion (seedless apricot), P. avium cv Tieton, P. avium cv Satonishiki, P. mume cv Tortuosa, P. ferganensis
