@@ -248,12 +248,12 @@ class HtmlLayoutBarleymap(object):
             
             To use the <strong><i><a href="{2}/align/">Align sequences</a></i></strong> option you must provide nucleotide sequences of the markers (in FASTA format).
             <br/>These will be used to retrieve their positions through
-            sequence alignment to the selected map (ie Pp_NCBI_V2).
+            sequence alignment to the selected maps (Pp_NCBI_V2 by default).
             <br/><br/>
            
             To use the <strong><i><a href="{2}/prot/">Align proteins</a></i></strong> option you must provide amino acid sequences in FASTA format.
             <br/>These will be used to retrieve their positions through protein-to-DNA
-            alignment to the selected map (ie Pp_NCBI_V2).
+            alignment to the selected maps (Pp_NCBI_V2 by default).
             <br/><br/>
 
             The <strong><i><a href="{2}/locate/">Locate by position</a></i></strong> option allows to examine the map context of specific positions,
