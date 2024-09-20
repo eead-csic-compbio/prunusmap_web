@@ -465,6 +465,23 @@ input.demobutton{
 
 
 
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-basis: calc(33% - 10px);
+}
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
 
 
 
