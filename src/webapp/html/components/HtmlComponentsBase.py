@@ -506,9 +506,46 @@ class HtmlComponentsBase(object):
     @staticmethod
     def _load_data(input_data, config_data, input_name):
         output = []
-        
-        output.append('<select name="{0}" id="{0}" multiple>'.format(str(input_name)))
-        
+
+        ### Najla's modifications_19September24: add a new filter to select species
+
+        ### Select species"
+        output.append('''
+
+            <label>Select species:</label>
+            <br/><br/>
+            <div id="{0}_filter_checkbox" class="checkbox-container">
+                <label for="filter_pp">
+                    <input type="checkbox" id="filter_pp" value="Pp_" onchange="filterOptions('{0}')"> Prunus persica
+                </label>
+
+                <label for="filter_pd">
+                    <input type="checkbox" id="filter_pd" value="Pd_" onchange="filterOptions('{0}')"> Prunus dulcis
+                </label>
+
+                <label for="filter_pa">
+                    <input type="checkbox" id="filter_pa" value="Pa_" onchange="filterOptions('{0}')"> Prunus armeniaca
+                </label>
+                
+                <label for="filter_pav">
+                    <input type="checkbox" id="filter_pav" value="Pav_" onchange="filterOptions('{0}')"> Prunus avium
+                </label>
+
+                <label for="filter_pm">
+                    <input type="checkbox" id="filter_pm" value="Pm_" onchange="filterOptions('{0}')"> Prunus mume
+                </label>
+                
+                <label for="filter_other">
+                    <input type="checkbox" id="filter_p" value="P" onchange="filterOptions('{0}')"> Wild relatives
+                </label>
+            </div>
+        '''.format(str(input_name)))
+
+        output.append('<select name="{0}" id="{0}" style="width: 100%; height: 62%;" multiple>'.format(str(input_name)))
+
+        ## this is the old line: output.append('<select name="{0}" id="{0}" multiple>'.format(str(input_name)))
+       
+
         if not input_data:
             input_data = []
         elif input_data == "":
@@ -529,6 +566,93 @@ class HtmlComponentsBase(object):
             output.append('>{0}</option>'.format(conf_name))
         
         output.append("</select>")
+        
+        
+        ## Najla's modifications 19September2024
+        # Add the filter script
+        output.append('''<script>
+        function filterOptions(selectId) {
+            var checkboxes = document.querySelectorAll("#" + selectId + "_filter_checkbox input[type='checkbox']");
+            var selectedFilters = Array.from(checkboxes).filter(function(checkbox) {
+                return checkbox.checked;
+            }).map(function(checkbox) {
+                return checkbox.value.toLowerCase();
+            });
+    
+            var select = document.getElementById(selectId);
+            var options = select.options;
+            var selectedMaps = [];
+            var hasSelection = false; // To track if any maps are selected
+    
+            // Clear previously selected maps and store all maps initially
+            for (var i = 0; i < options.length; i++) {
+                options[i].selected = false; // Deselect all options
+            }
+    
+            // Iterate through options (maps) and handle filtering logic
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                var text = option.text.toLowerCase();
+                var showOption = false;
+    
+                // Check if no species filters are selected
+                if (selectedFilters.length === 0) {
+                    option.disabled = false;
+                    continue;
+                }
+    
+                // Check for each selected species filter
+                for (var j = 0; j < selectedFilters.length; j++) {
+                    var filter = selectedFilters[j];
+    
+                    // If the filter matches the species prefix
+                    if (filter !== "p" && text.startsWith(filter)) {
+                        showOption = true;
+    
+                        // If not already selected, add to selected maps
+                        if (!option.selected) {
+                            selectedMaps.push(option);
+                        }
+                        break;
+                    }
+                    // Handle wild relatives separately
+                    else if (filter === "p") {
+                        if (text.startsWith("p") && !text.startsWith("pp_") && !text.startsWith("pd_") &&
+                            !text.startsWith("pa_") && !text.startsWith("pav_") && !text.startsWith("pm_")) {
+                            showOption = true;
+                            if (!option.selected) {
+                                selectedMaps.push(option);
+                            }
+                            break;
+                        }
+                    }
+                }
+    
+                // Disable option if it doesn't match the filter
+                option.disabled = !showOption;
+            }
+    
+            // If species checkbox is selected but no maps are selected, select all matching maps
+            if (selectedMaps.length > 0) {
+                for (var k = 0; k < selectedMaps.length; k++) {
+                    selectedMaps[k].selected = true;
+                }
+                hasSelection = true;
+            }
+    
+            // If no species filters are selected and no maps are selected, set default map
+            if (!hasSelection && selectedFilters.length === 0) {
+                for (var l = 0; l < options.length; l++) {
+                    if (options[l].text === "Pp_Lovell_NCBI_V2") {
+                        options[l].selected = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        </script>''')
         
         return "".join(output)
 
