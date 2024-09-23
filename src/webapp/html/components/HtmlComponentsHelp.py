@@ -849,7 +849,6 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                     Note that queries in this table could still have map position, through a different alignment.
                                 <li><strong>Unaligned</strong>: shows those queries which lack alignment hit (and thus map position).</li>
                             </ul>
-i                            
                         <br/>
             """.format(base_url))
 
