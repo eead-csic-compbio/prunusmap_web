@@ -54,7 +54,8 @@ class HtmlComponentsAlign(object):
         output.append("""
                 <table><tr>
                 <td>
-                    <fieldset id="align_fieldset" style="border:solid thin;">
+                    <!-- #################### Najla's modifications_19September24: Added width and height -->
+                    <fieldset id="align_fieldset" style="border:solid thin; width: 350px; height:350px;">
                     <legend style="text-align:left;">Choose map:</legend>
                     """)
         

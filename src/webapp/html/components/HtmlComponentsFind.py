@@ -50,7 +50,8 @@ class HtmlComponentsFind(object):
         output.append("""
                 <table><tr>
                 <td>
-                    <fieldset id="find_fieldset" style="border:solid thin;">
+                    <!-- #################### Najla's modifications: added width and height settings  -->
+                    <fieldset id="find_fieldset" style="border:solid thin; width: 350px; height: 350px;">
                     <legend style="text-align:left;">Choose map:</legend>
                     """)
         

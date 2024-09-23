@@ -56,7 +56,13 @@ class HtmlComponentsHelp(object):
                             Prunusmap output
                             
                         </a></li>
+                        
+                        <li><a href="#download">
+                        
+                        Download marker datasets
                             
+                        </a></li>
+
                         <li><a href="#confidentiality">
                         
                             Confidentiality
@@ -843,10 +849,70 @@ PrunusMap was designed to search the position of Prunus genetic markers on the P
                                     Note that queries in this table could still have map position, through a different alignment.
                                 <li><strong>Unaligned</strong>: shows those queries which lack alignment hit (and thus map position).</li>
                             </ul>
-                            
+i                            
                         <br/>
             """.format(base_url))
+
+        ## DOWNLOAD
         
+        output_buffer.append("""
+                    <hr/>
+                    <br/>
+                    <a class="top_link" href="#"><img style="width:10px;height:10px;border:none;" src="{0}/img/top.jpg"/></a>
+                    <h2 id="download">Download SNP Arrays</h2>
+                        
+                        <br/><br/>
+                        Click the buttons below to download SNP array datasets for Peach, Cherry, and Almond:
+                        <br/><br/>
+                        
+                        <table cellspacing="30">
+                            <tr><td>
+                            <h3> - Prunus persica: peach </h3>
+                            </td>
+                            <td>
+                                <a href="https://github.com/eead-csic-compbio/prunusmap_web/raw/refs/heads/master/download/IRSC_9K_peach.xlsx" download="IRSC_9K_peach.xlsx">
+                                    <img src="{0}/img/excel_download.png" alt="excel_download_icon" width="100" height="100">
+                                    <p>IRSC 9K peach array</p>
+                                </a>
+                            </td><td>
+                                <a href="https://github.com/eead-csic-compbio/prunusmap_web/raw/refs/heads/master/download/IRSC_18K_peach.xlsx" download="IRSC_18K_peach.xlsx">
+                                    <img src="{0}/img/excel_download.png" alt="excel_download_icon" width="100" height="100">
+                                    <p>IRSC 18K peach array</p>
+                                </a>
+                            </td><td>
+                                <a href="https://github.com/eead-csic-compbio/prunusmap_web/raw/refs/heads/master/download/Adafuel_peach.xlsx" download="Adafuel_peach.xlsx">
+                                    <img src="{0}/img/excel_download.png" alt="excel_download_icon" width="100" height="100">
+                                    <p>Adafuel peach </p>
+                            </td></tr>
+
+                        </table>
+                        <table cellspacing="30">
+                            <tr><td>
+                                <h3>- Prunus avium: Cherry </h3>
+                            </td>
+                            <td>
+                                <a href="https://github.com/eead-csic-compbio/prunusmap_web/raw/refs/heads/master/download/IRSC_6K_cherry.xlsx" download="IRSC_6K_cherry.xlsx">
+                                    <img src="{0}/img/excel_download.png" alt="excel_download_icon" width="100" height="100">
+                                    <p>IRSC 6K cherry</p>
+                                </a>
+                            </td></tr>
+                        </table>
+                        <table cellspacing="30">
+                            <tr><td>
+                                <h3>- Prunus dulcis: Almond </h3>
+                            </td>
+                            <td>
+                                <a href="https://github.com/eead-csic-compbio/prunusmap_web/raw/refs/heads/master/download/Axiom%2060K%20almond.xlsx" download="Axiom 60K almond.xlsx">
+                                    <img src="{0}/img/excel_download.png" alt="excel_download_icon" width="100" height="100">
+                                    <p>Axiom 60K Prunus dulcis</p>
+                                </a>
+                            </td></tr>
+                        </table>
+
+                        <br/>
+            """.format(base_url))
+     
+
         ## CONFIDENTIALITY
         
         output_buffer.append("""

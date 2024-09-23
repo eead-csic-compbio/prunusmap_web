@@ -50,7 +50,8 @@ class HtmlComponentsLocate(object):
         output.append("""
                 <table><tr>
                 <td>
-                    <fieldset id="locate_fieldset" style="border:solid thin;">
+                    <!-- #################### Najla's modifications 19September24 ADDED width and height -->
+                    <fieldset id="locate_fieldset" style="border:solid thin; width: 350px; height: 350 px;">
                     <legend style="text-align:left;">Choose map:</legend>
                     """)
         
