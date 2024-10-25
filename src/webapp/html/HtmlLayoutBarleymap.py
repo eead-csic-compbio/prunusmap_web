@@ -252,7 +252,7 @@ class HtmlLayoutBarleymap(object):
 
             <strong>Citations:</strong>
 
-            <a href="https://doi.org/10.1101/2024.03.26.586732">{1}</a>
+            <a href="https://doi.org/10.1093/hr/uhae301">{1}</a>
             <br/><br/>
 
             <hr/>

@@ -167,7 +167,7 @@ miniprot_app_path PATH_TO_MINIPROT/miniprot
 miniprot_dbs_path PATH_TO_MINIPROT_DATABASES
 
 ########### Other
-citation Ksouri_N,_Moreno_MA,_Contreras-Moreira_B,_Gogorcena_Y_(2024)_Mapping_the_genomic_landscape_of_peach_and_almond_with_PrunusMap._bioRxiv:2024.03.26.586732 
+citation Ksouri_N,_Moreno_MA,_Contreras-Moreira_B,_Gogorcena_Y_(2024)_Mapping_the_genomic_landscape_of_Prunus_spp._with_PrunusMap._Horticulture_Research,uhae301
 stdalone_app https://github.com/Cantalapiedra/barleymap
 ```
 
@@ -806,7 +806,7 @@ chr7	227367117
 
 ## 5) Citation
 
-Ksouri N, Moreno MA, Contreras-Moreira B, Gogorcena Y (2024) Mapping the genomic landscape of peach and almond with PrunusMap. https://www.biorxiv.org/content/10.1101/2024.03.26.586732v1
+Ksouri N, Moreno MA, Contreras-Moreira B, Gogorcena Y (2024) Mapping the genomic landscape of Prunus spp. with PrunusMap. https://doi.org/10.1093/hr/uhae301
 
 Cantalapiedra, C.P., Boudiar, R., Casas, A.M. et al. BARLEYMAP: physical and genetic mapping of nucleotide sequences and annotation of surrounding loci in barley. Mol Breeding 35, 13 (2015). https://doi.org/10.1007/s11032-015-0253-1
 
